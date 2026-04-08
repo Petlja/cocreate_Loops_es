@@ -21,6 +21,23 @@ subtask, they switch roles. Pair programming helps students learn by working
 together, practicing teamwork, sharing ideas, and seeing different ways to
 solve the same problems.
 
+## Learning Objectives
+
+- To understand the structure and purpose of loops, and their use in manipulation and transformation of the text.
+- To understand the principles behind simple cryptographic algorithms and to implement these algorithms in a chosen programming language using loops.
+- To understand how computers protect privacy and prevent misuse of information and how text can be hidden, scrambled, and protected from unauthorized access.
+
+## Learning Outcomes
+
+After completing the lesson, students will be able to:
+
+- Correctly write loop-based code that implements a Caesar cipher with encryption and decryption functionality.
+- Write and explain a loop-based implementation of an XOR cipher.
+- Construct a Skytale cipher using loops.
+- Identify which type of loop is appropriate for different tasks involving text processing.
+- Effectively work in pairs applying pair programming, effectively communicate, and present results in a clear and confident manner.
+
+
 ## Benefits for Students
 
 - **Peer Learning:** Students learn from each other. Beginners benefit from

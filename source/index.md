@@ -31,7 +31,7 @@ useful:
 
 # Loops and Cryptography
 
-You are about to start an introductory lessons about loops on characters and strings
+You are about to start an introductory lesson about loops on characters and strings
 to implement basic cryptographic algorithms.
 
 Course author: Petlja Foundation
