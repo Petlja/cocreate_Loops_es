@@ -1,19 +1,19 @@
-# Good collaboration rules
+# Reglas para una buena colaboración
 
-1. We are all equal and we respect one another.
-2. We foster a good atmosphere even when we think differently.
-3. We are all responsible for group work. In successful groups, all members have a sense of joint or shared responsibility for the results of group work.
-4. We help everyone contribute to group work.
-5. We strive to involve everyone in decision-making.
-6. The more ideas we consider, the more certain we are that we have selected the best one.
-7. We expound every idea, weigh arguments, and devise solutions.
-8. We wisely use our time to work on the task.
-9. We monitor our progress and contemplate our next step.
+1. Todos somos iguales y nos respetamos mutuamente.
+2. Fomentamos un buen ambiente incluso cuando pensamos de forma diferente.
+3. Todos somos responsables del trabajo en grupo. En los grupos exitosos, todos los miembros tienen un sentido de responsabilidad conjunta o compartida por los resultados del trabajo grupal.
+4. Ayudamos a todos a contribuir al trabajo en grupo.
+5. Nos esforzamos por involucrar a todos en la toma de decisiones.
+6. Cuantas más ideas consideramos, más seguros estamos de haber elegido la mejor.
+7. Exponemos cada idea, sopesamos los argumentos y diseñamos soluciones.
+8. Usamos nuestro tiempo de manera inteligente para trabajar en la tarea.
+9. Supervisamos nuestro progreso y reflexionamos sobre nuestro siguiente paso.
 
-The successful collaboration rules have to be complied with to complete the task:
+Las reglas de colaboración exitosa deben cumplirse para completar la tarea:
 
-* Share responsibilities equally
-* Listen actively and respect each other's ideas
-* Make decisions together
-* Stay focused on the task
-* Support each other and solve problems as a pair
+* Compartir responsabilidades de manera equitativa
+* Escuchar activamente y respetar las ideas de los demás
+* Tomar decisiones juntos
+* Mantenerse enfocados en la tarea
+* Apoyarse mutuamente y resolver los problemas en pareja

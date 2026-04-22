@@ -1,7 +1,7 @@
 ---
 status: exclude
 ---
-# Introduction
+# Introducción
 
 ```{toctree}
 :maxdepth: 2
