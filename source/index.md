@@ -1,26 +1,26 @@
 ﻿---
 status: exclude
-alias: Loops_and_Cryptography
+alias: Loops_and_Cryptography_es
 lang: en
-short_description: Introduction to Cryptography with Loops
+short_description: Introducción a la Criptografía con Bucles
 long_description: >
-    <p>In this course, you will learn to apply loops on characters and strings to implement basic cryptographic algorithms.</p>
+    <p>En este curso, aprenderás a aplicar bucles sobre caracteres y cadenas para implementar algoritmos criptográficos básicos.</p>
     <p>
     <a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.sr_LATN">
     <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png"></a>
-    <br>This course was published by Petlja Foundation under the <a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.sr_LATN">Creative Commons Attribution 4.0 International License (CC BY 4.0)</a>.
+    <br>Este curso fue publicado por la Fundación Petlja bajo la <a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.sr_LATN">Licencia Internacional Creative Commons Atribución 4.0 (CC BY 4.0)</a>.
     </p>
 
 will_learn:
-    - Conditions and Loops Fundamentals
-    - Characters and Strings Fundamentals
-    - Introduction to Cryptography
-    - Caesar Cipher
-    - Skytale
+    - Fundamentos de Condiciones y Bucles
+    - Fundamentos de Caracteres y Cadenas
+    - Introducción a la Criptografía
+    - Cifrado César
+    - Escítala
     - XOR
 
 needed: 
-    - A basic personal computer system with Internet access. Optionally, a computer system with specific programming language IDE.
+    - Un sistema informático personal básico con acceso a Internet. Opcionalmente, un sistema informático con un IDE de lenguaje de programación específico.
 
 useful:
     - Microsoft C++, C, and Assembler documentation: https://learn.microsoft.com/en-us/cpp/
@@ -29,15 +29,15 @@ useful:
     - Python language documentation: https://docs.python.org/3/
 ---
 
-# Loops and Cryptography
+# Bucles y Criptografía
 
-You are about to start an introductory lesson about loops on characters and strings
-to implement basic cryptographic algorithms.
+Estás a punto de comenzar una lección introductoria sobre bucles en caracteres y cadenas
+para implementar algoritmos criptográficos básicos.
 
-Course author: Petlja Foundation
+Autor del curso: Fundación Petlja
 
-This course is published by Petlja Foundation under the
-[Creative Commons Attribution 4.0 International License (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.sr_LATN).
+Este curso es publicado por la Fundación Petlja bajo la
+[Licencia Internacional Creative Commons Atribución 4.0 (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.sr_LATN).
 
 ```{toctree}
 :maxdepth: 2
