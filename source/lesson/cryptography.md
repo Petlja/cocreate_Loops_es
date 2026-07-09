@@ -12,10 +12,10 @@ En India, escritos de hace 2000 años hablan de dos tipos de cifrado – el prim
 tipo se basaba en la sustitución de letras según sus relaciones fonéticas,
 y el segundo en un alfabeto codificado mediante el emparejamiento de letras y el uso
 de letras recíprocas. En Persia, el actual Irán, también había dos tipos de
-cifrado – el primer guion real se usaba para la correspondencia oficial dentro
+cifrado – el primer guíón real se usaba para la correspondencia oficial dentro
 del reino, y el segundo para la comunicación con otros estados.
 
-El primer libro sobre criptografía, titulado “El Libro de los Mensajes Criptográficos”
+El primer libro sobre criptografía, titulado "El Libro de los Mensajes Criptográficos"
 según fuentes históricas, fue escrito por el filósofo árabe Al-Khalil
 (717–786), en el que se utilizan por primera vez permutaciones y combinaciones
 para enumerar todas las palabras árabes con y sin vocales. Sin embargo, los métodos de cifrado
@@ -25,18 +25,18 @@ aprovecharse para descifrar el código.
 ![Manuscrito de Kindi sobre el descifrado de mensajes criptográficos](./images/kindi.jpg)
 
 Tras el descubrimiento del análisis de frecuencia de letras en un mensaje, el
-matemático árabe Al-Kindi escribió el libro “Manuscrito para el Descifrado de
-Mensajes Criptográficos” en el siglo IX, en el que se describió por primera vez
+matemático árabe Al-Kindi escribió el libro "Manuscrito para el Descifrado de
+Mensajes Criptográficos" en el siglo IX, en el que se describió por primera vez
 el uso de técnicas de análisis de frecuencia.
 
 > **El criptoanálisis** es la disciplina científica que estudia métodos para
-> “quebrar” sistemas criptográficos. La palabra criptoanálisis proviene de las palabras
+> "quebrar" sistemas criptográficos. La palabra criptoanálisis proviene de las palabras
 > griegas kryptós (*oculto, secreto*) y analýein (*análisis*).
 
 El primer tratado conocido sobre criptografía fue escrito en 25 páginas por el arquitecto italiano
 Leone Battista Alberti en 1467. Él es también el creador del círculo cifrador
 y otras soluciones para el ocultamiento de texto en doble capa. Medio siglo
-después, se publicó la obra de Johannes Trithemus sobre criptografía en cinco volúmenes.
+despus, se publicó la obra de Johannes Trithemus sobre criptografía en cinco volúmenes.
 En el siglo XVI, realizaron contribuciones significativas el médico milanés
 Girolamo Cardano, el matemático Battista Porta y el diplomático francés
 Blaise de Vigenere.
@@ -90,11 +90,43 @@ De cara al futuro, se espera que la criptografía cuántica se convierta en un p
 la comunicación segura. Se basa en el principio de incertidumbre de Heisenberg de
 la física cuántica. Sin embargo, la computación cuántica también representa una amenaza para muchos
 algoritmos criptográficos en uso hoy en día, lo que ha llevado al desarrollo de
-la criptografía poscuántica.
+la criptografía postcuántica.
 
 ![Google Quantum AI](./images/google.jpg)
 
 La importancia de la criptología en la sociedad moderna no puede subestimarse.
 Los sistemas criptográficos garantizan la privacidad de las comunicaciones electrónicas,
-habilitan el comercio electrónico seguro, protegen las criptomonedas y en algunos países
+habilitan el comercio electrónico seguro, protegen las criptodivisas y en algunos países
 incluso salvaguardan la votación electrónica y el recuento de votos.
+Sin embargo, también surgen numerosas cuestiones éticas. ¡Prepárate para un debate!
+
+## Debate
+
+**Tema del debate: ¿Debería el derecho a la privacidad ser más importante que la seguridad de la sociedad?**
+
+División de roles
+
+Equipo A – A favor de la fuerte protección de la privacidad
+
+Cada persona tiene derecho a la comunicación privada.
+El cifrado protege a los ciudadanos del abuso, el robo de identidad y la vigilancia.
+Nadie, ni siquiera el estado, debería tener acceso a los mensajes privados sin una base legal clara.
+
+Equipo B – A favor de una mayor supervisión por seguridad
+
+El cifrado completo puede ayudar a criminales y terroristas a ocultar sus actividades.
+Los servicios de seguridad a veces necesitan acceso a las comunicaciones para proteger a los ciudadanos.
+La sociedad debe encontrar un equilibrio entre privacidad y seguridad.
+
+Puedes llevar a cabo la consideración de argumentos en grupos entre dos clases o durante la clase, seguido de un intercambio de puntos de vista (cada equipo tiene 5 minutos para presentar su posición). Otros estudiantes – el jurado – luego hacen preguntas y ambos equipos tienen aproximadamente 10 minutos para responder.
+
+La evaluación y determinación del equipo ganador no es necesaria, pero se recomienda una discusión conjunta sobre todas las conclusiones presentadas.
+
+## Preguntas para reflexión
+
+¿Debería la policía tener derecho a acceder a los mensajes cifrados de los sospechosos?
+¿Estarías de acuerdo en que se analicen tus mensajes si eso evitara un ataque terrorista?
+¿Cuáles son los riesgos si alguien tiene acceso a todos nuestros datos?
+¿Son las redes sociales suficientemente transparentes sobre los datos que recopilan?
+¿Son conscientes los jóvenes de cuántos datos personales dejan en Internet?
+¿Es una contraseña suficiente para proteger una cuenta o se necesitan medidas de seguridad adicionales?
