@@ -1,4 +1,4 @@
-﻿---
+---
 status: exclude
 alias: Loops_and_Cryptography_es
 lang: en
@@ -21,6 +21,7 @@ will_learn:
 
 needed: 
     - Un sistema informático personal básico con acceso a Internet. Opcionalmente, un sistema informático con un IDE de lenguaje de programación específico.
+    - Tres horas de clase
 
 useful:
     - Microsoft C++, C, and Assembler documentation: https://learn.microsoft.com/en-us/cpp/
@@ -31,18 +32,17 @@ useful:
 
 # Bucles y Criptografía
 
-Estás a punto de comenzar una lección introductoria sobre bucles en caracteres y cadenas
-para implementar algoritmos criptográficos básicos.
+Estás a punto de comenzar una lección introductoria sobre bucles en caracteres y cadenas para implementar algoritmos criptográficos básicos.
 
 Autor del curso: Fundación Petlja
 
-Este curso es publicado por la Fundación Petlja bajo la
-[Licencia Internacional Creative Commons Atribución 4.0 (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.sr_LATN).
+Este curso es publicado por la Fundación Petlja bajo la [Licencia Internacional Creative Commons Atribución 4.0 (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.sr_LATN).
 
 ```{toctree}
 :maxdepth: 2
-:caption: Contents
+:caption: Contenido
 :hidden:
 
 intro/index
 lesson/index
+```
