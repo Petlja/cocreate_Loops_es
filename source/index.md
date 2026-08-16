@@ -1,6 +1,6 @@
 ﻿---
 status: exclude
-alias: Loops_and_Cryptography
+alias: Loops_and_Cryptography_es
 lang: en
 short_description: Introduction to Cryptography with Loops
 long_description: >
