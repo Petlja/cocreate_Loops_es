@@ -1,6 +1,6 @@
-# Example Lecture 2
+# Lección de Ejemplo 2
 
-This is another example lecture in English.
+Esta es otra lección de ejemplo en español.
 
-Use this space to add more sample content, explanations, or exercises for your course.
+Usa este espacio para agregar más contenido de muestra, explicaciones o ejercicios para tu curso.
 

@@ -1,8 +1,20 @@
 # Escítala
 
-La escítala (en inglés, skytale) es una de las herramientas de cifrado conocidas más antiguas. Procede de la antigua Grecia, alrededor del año 400 a. C. Era un dispositivo cilíndrico sencillo que los espartanos utilizaban para enviar mensajes secretos durante las campañas militares.
+Al completar esta lección, serás capaz de:
 
-Una tira de pergamino o cuero se enrollaba alrededor de un palo de madera (*escítala*) de un diámetro determinado. A continuación, el mensaje se escribía a lo largo del palo. Cuando se desenrollaba la tira, las letras parecían mezcladas y no tenían sentido. El destinatario debía tener un palo del **mismo diámetro** para poder enrollar la tira y leer el mensaje original.
+* Explicar cómo funciona el cifrado Escítala.
+* Implementar el cifrado y descifrado usando operaciones simples con arrays o cadenas.
+* Comprender cómo los dispositivos físicos de cifrado pueden modelarse digitalmente.
+
+La Escítala es una de las herramientas de cifrado más antiguas conocidas, que se remonta a
+la antigua Grecia alrededor del año 400 a. C. Era un sencillo dispositivo cilíndrico utilizado por los
+espartanos para enviar mensajes secretos durante las campañas militares.
+
+Una tira de pergamino o cuero se enrollaba alrededor de un bastón de madera (la *escítala*)
+de un diámetro específico. El mensaje se escribía longitudinalmente a lo largo del bastón.
+Una vez desenrolladas, las letras aparecían desordenadas y sin sentido. El destinatario
+necesitaba un bastón del **exacto mismo diámetro** para enrollar la tira y leer el
+mensaje original.
 
 Si quieres cifrar el mensaje:
 
@@ -10,8 +22,8 @@ Si quieres cifrar el mensaje:
 attackatdawn
 ```
 
-
-y eliges un palo que permita **4 letras por vuelta**, primero escribes el mensaje verticalmente en columnas, formando filas de longitud 4:
+y eliges un bastón que permite **4 letras por vuelta**, primero escribes el
+mensaje verticalmente en columnas, formando filas de longitud 4:
 
 ```text
 a t t a
@@ -19,33 +31,34 @@ c k a t
 d a w n
 ```
 
-
-Después, el texto cifrado se obtiene leyendo por filas:
+El texto cifrado se crea leyendo fila por fila:
 
 ```text
 acdtkatawatn
 ```
 
+Para descifrar, el receptor vuelve a enrollar la tira alrededor de un bastón del mismo diámetro
+y lee verticalmente de nuevo para reconstruir el mensaje original.
 
-Para descifrar el mensaje, el destinatario vuelve a enrollar la tira alrededor de un palo del mismo diámetro y lee verticalmente para reconstruir el mensaje original.
+## Tarea simple
 
+Crea una aplicación de consola en cualquier lenguaje de programación para cifrar y descifrar
+mensajes usando el cifrado Escítala.
 
-## Primera tarea
-
-Crea una aplicación de consola, en cualquier lenguaje de programación, que cifre y descifre mensajes utilizando el cifrado Escítala. Utiliza el entorno de desarrollo que empleáis en las clases de programación.
-
-El alfabeto permitido para los mensajes contiene únicamente letras minúsculas del alfabeto inglés:
+El alfabeto permitido para los mensajes incluye solo las letras minúsculas del
+alfabeto inglés:
 
 ```text
 Σ = { a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z }
 ```
 
+No se permiten espacios, letras mayúsculas, números ni otros caracteres.
 
-¡No se permiten espacios, letras mayúsculas, números ni otros signos!
-
-
-En la primera línea de entrada aparece el mensaje `m`, de como máximo cien caracteres. En la segunda línea aparece el número entero `k` (el número de columnas, es decir, la circunferencia del palo). En la tercera línea aparece el número entero `s`, que representa la operación. Si $s=1$, se debe cifrar `m`. Si $s=2$, se debe descifrar `m`.
-
+En la primera línea de la entrada del usuario habrá un mensaje `m` de no más de
+cien caracteres. En la segunda línea habrá un entero `k` (el
+número de columnas – circunferencia del bastón). En la tercera línea habrá
+un entero `s`, que representa la operación. Si $s=1$, entonces `m` debe
+cifrarse. Si $s=2$, entonces `m` debe descifrarse.
 
 ### Ejemplo de prueba 1
 
@@ -57,13 +70,11 @@ attackatdawn
 1
 ```
 
-
 la salida debe ser:
 
 ```text
 acdtkatawatn
 ```
-
 
 ### Ejemplo de prueba 2
 
@@ -75,36 +86,44 @@ acdtkatawatn
 2
 ```
 
-
 la salida debe ser:
 
 ```text
 attackatdawn
 ```
 
-## Consejos para la solución
+## Comenzar la tarea
 
-Para **cifrar**, escribe el texto claro verticalmente en una tabla con `k` columnas. Lee la tabla por filas para obtener el texto cifrado. Para **descifrar**, escribe el texto cifrado por filas en una tabla con `k` columnas y, a continuación, lee la tabla verticalmente para reconstruir el texto claro.
+[Implement the cypher here ](https://arena.petlja.org/sr-Latn-RS/competition/123-co-create#tab_142946)
 
+## Pistas para la solución
 
-## Tareas más complejas con el cifrado Escítala (opcional)
+Para el **cifrado**, escribe el texto plano verticalmente en una tabla con `k`
+columnas. Lee la tabla fila por fila para formar el texto cifrado. Para el **descifrado**,
+escribe el texto cifrado fila por fila en una tabla con `k` columnas, lee la tabla
+verticalmente para reconstruir el texto plano.
 
-### Amplía el alfabeto permitido
+## Tareas avanzadas de Escítala (opcional)
+
+### Ampliar el alfabeto permitido
 
 Incluye letras mayúsculas, espacios, números y signos de puntuación.
 
-### Utiliza funciones
+### Usar funciones
 
-Crea las funciones `encrypt()` y `decrypt()` para que el código sea modular.
+Crea funciones `encrypt()` y `decrypt()` para mantener el código modular.
 
-### Crea una clase
+### Crear una Clase
 
-Implementa una clase `SkytaleCipher` que almacene `k` y proporcione métodos para cifrar y descifrar.
+Implementa una clase `SkytaleCipher` que almacene `k` y proporcione métodos para
+el cifrado y descifrado.
 
-### Cifra y descifra archivos
+### Cifrar y Descifrar Archivos
 
-Modifica el programa para que lea texto claro o cifrado de un archivo y escriba el resultado en otro archivo.
+Modifica el programa para leer texto plano o cifrado desde un archivo y escribir
+los resultados en otro archivo.
 
-### Procesa filas incompletas
+### Manejar filas incompletas
 
-Modifica el programa para que, si la última fila es más corta que `k`, siga cifrando y descifrando correctamente mediante el procesamiento de los caracteres que faltan o la adición de relleno.
+Modifica tu programa para que si la última fila es más corta que `k`, aún
+cifre y descifre correctamente manejando los caracteres faltantes o el relleno.
