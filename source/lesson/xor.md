@@ -1,3 +1,4 @@
+
 # XOR
 
 XOR *(exclusiva O)* es una operación lógica que produce verdadero (1) solo cuando las entradas difieren. Es una operación binaria fundamental utilizada en criptografía.

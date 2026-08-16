@@ -45,6 +45,7 @@ DEC OCT HEX CH    DEC OCT HEX CH    DEC OCT HEX CH    DEC OCT HEX CH
 31  37  1F  US    63  77  3F  ?     95  137 5F  _     127 177 7F  DEL
 ```
 
+
 ## Unicode
 
 Unicode es un conjunto de caracteres extendido que incluye todos los códigos ASCII en su primera parte. En Unicode, los primeros 128 valores de código (U+0000 a U+007F) son completamente idénticos a los códigos ASCII. Más allá de eso, Unicode define más de 150.000 caracteres de sistemas de escritura en todo el mundo. Por ejemplo, los caracteres latinos específicos del alfabeto serbio se definen de la siguiente manera:

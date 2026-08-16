@@ -10,4 +10,5 @@ cryptography
 caesar
 skytale
 xor
+quiz
 ```
