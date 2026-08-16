@@ -1,48 +1,55 @@
-# Caesar Cipher
 
-One of the great military commanders who used encrypted messages was Julius Caesar, around 50 BC. He used a simple cipher known as the Caesar cipher to protect military communications. This cipher is also known as a shift cipher because each letter in the plaintext is replaced by a letter some fixed number of positions down or up the alphabet.
+# Cifrado César
 
-For example, if you write `NIKOLATESLA` and shift each letter three places to the right:
+Uno de los grandes generales que utilizó mensajes cifrados fue Julio César, alrededor del año 50 a. C. Cuando César enviaba mensajes a sus generales, los cifraba desplazando las letras del texto un número determinado de posiciones en el alfabeto. Los destinatarios podían descifrarlos porque conocían el valor del desplazamiento, mientras que todos los demás solo veían un texto sin sentido.
+
+Por ejemplo, si escribes `NIKOLATESLA` y desplazas cada letra tres posiciones hacia la derecha:
 
 ```text
 A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
 X Y Z A B C D E F G H I J K L M N O P Q R S T U V W
 ```
 
-Letter `N` becomes `K`, `I` becomes `F`, and so on. So each letter is replaced by another letter which is a certain distance away in the alphabet.
 
-**Decryption** works the same way, but in reverse. To decrypt the ciphertext, shift each letter back three places to the left:
+La letra `N` se convierte en `K`, `I` se convierte en `F`, y así sucesivamente. Por tanto, cada letra se sustituye por otra situada un número determinado de posiciones más adelante en el alfabeto. Cuando se llega al final del alfabeto, se continúa desde el principio. El resultado de desplazar tres letras hacia la derecha es el mensaje cifrado `KFHLIXQBPIX`. Por otro lado, si desplazas cada letra de la palabra obtenida tres posiciones hacia la izquierda:
 
 ```text
 A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
 D E F G H I J K L M N O P Q R S T U V W X Y Z A B C
 ```
 
-Letter `K` becomes `N`, `F` becomes `I`, and so on. The result of this shift is the original decrypted message `NIKOLATESLA`.
+
+La letra `K` se convierte en `N`, `F` se convierte en `I`, y así sucesivamente. El resultado de este desplazamiento es el mensaje original descifrado `NIKOLATESLA`.
 
 ![Caesar Cipher Left Shift](./images/caesar1.png)
 
-## Assignment to think about
 
-Think about how you would create a console application in any programming language that will encrypt and decrypt messages using a Caesar cipher.
+## Ejercicio de reflexión
+
+Piensa en cómo crearías una aplicación de consola, en cualquier lenguaje de programación, que cifre y descifre mensajes utilizando el cifrado César. A continuación se ofrecen algunos consejos. Después de leerlos, intenta crear una aplicación de consola en el entorno de desarrollo que utilizáis en las clases de programación.
+
 
 ```{infonote}
-The first student (*driver*) should focus on syntax while typing the code to encrypt the message. The second student (*navigator*) should watch the code, suggest improvements, and ask questions. After encrypting, switch roles to decrypt.
+El primer estudiante (*conductor*) debe centrarse en la sintaxis mientras escribe el código para cifrar el mensaje. El segundo estudiante (*navegador*) debe revisar cada línea de código mientras se escribe, buscar errores, hacer preguntas y proponer mejoras. Después, los estudiantes cambian de rol y continúan escribiendo el código para descifrar el mensaje.
 ```
 
-The allowed alphabet for messages (both for plaintext and ciphertext) can contain only lowercase letters of the English alphabet:
+
+El alfabeto permitido para los mensajes (tanto para el texto claro como para el texto cifrado) puede contener únicamente letras minúsculas del alfabeto inglés:
 
 ```text
 Σ = { a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z }
 ```
 
-Spaces, uppercase letters, numbers, and other characters are not allowed.
 
-In the first line of input there is a message `m` of at most one hundred characters, in the second line an integer `n` which represents the shift value (1–25), and in the third line an integer `s`, which represents the encryption direction. If `s=1` then `m` should be encrypted, and if `s=2`, then `m` should be decrypted.
+No se permiten espacios, letras mayúsculas, números ni otros signos.
 
-### Test Example 1
 
-If the input is:
+En la primera línea de entrada aparece el mensaje `m`, de como máximo cien caracteres; en la segunda línea, el número entero `n`, que representa el valor del desplazamiento ($1 \leq n < 26$); y en la tercera línea, el número entero `s`, que representa la dirección del cifrado. Si $s=1$, se debe cifrar `m`, y si $s=2`, se debe descifrar `m`.
+
+
+### Ejemplo de prueba 1
+
+Si la entrada es:
 
 ```text
 nikolatesla
@@ -50,15 +57,17 @@ nikolatesla
 1
 ```
 
-the output should be:
+
+la salida debe ser:
 
 ```text
 kfhlixqbpix
 ```
 
-### Test Example 2
 
-If the input is:
+### Ejemplo de prueba 2
+
+Si la entrada es:
 
 ```text
 kfhlixqbpix
@@ -66,15 +75,16 @@ kfhlixqbpix
 2
 ```
 
-the output should be:
+
+la salida debe ser:
 
 ```text
 nikolatesla
 ```
 
-## Solution hints
+## Consejos para la solución
 
-Since the English alphabet has 26 letters, the position of each letter can be represented by a number from 0 to 25.
+Como el alfabeto inglés tiene 26 letras, la posición de cada letra puede representarse con un número del 0 al 25.
 
 * a → 0
 * b → 1
@@ -82,64 +92,71 @@ Since the English alphabet has 26 letters, the position of each letter can be re
 * ...
 * z → 25
 
-To **encrypt** a letter, you can use the following formula:
+
+Para **cifrar** una letra, puedes utilizar la siguiente fórmula:
 
 ```text
 new_letter_position = (current_letter_position + shift_value) mod 26
 ```
 
-`original_position` represents the numeric value of the letter in the alphabet, `shift_value` represents the number of positions to shift (1–25), and `mod 26` ensures the value wraps around the alphabet.
 
-To **decrypt** a letter, you can use the following formula:
+`original_position` representa el valor numérico de la letra en el alfabeto, `shift_value` representa el número de posiciones del desplazamiento (1–25), y `mod 26` garantiza que el resultado vuelva al principio del alfabeto si supera la letra `z`.
+
+
+Para **descifrar** una letra, puedes utilizar la siguiente fórmula:
 
 ```text
 new_letter_position = (current_letter_position - shift_value + 26) mod 26
 ```
 
-Similarly to encryption, but the shift value is subtracted, and `+ 26` ensures the value does not become negative.
 
-## More complex Caesar Cipher Assignments (optional)
+El procedimiento es similar al cifrado, pero se resta el valor del desplazamiento, y `+ 26` garantiza que el valor no sea negativo antes de aplicar `mod 26`.
 
-### Expand the allowed alphabet
 
-Create a console application in any programming language that will encrypt and decrypt messages using the Caesar cipher, but with an expanded alphabet.
+## Tareas más complejas con el cifrado César (opcional)
 
-The application should encrypt or decrypt only lowercase and uppercase letters. Spaces, numbers, and punctuation marks should remain unchanged.
+### Amplía el alfabeto permitido
 
-In the first line of input there is a message `m` of at most one hundred characters, in the second line an integer `n` (the shift value from 1–25), and in the third line an integer `s` (1 for encryption, 2 for decryption).
+Crea una aplicación de consola, en cualquier lenguaje de programación, que cifre y descifre mensajes utilizando el cifrado César. El alfabeto permitido para los mensajes (tanto para el texto claro como para el texto cifrado) puede contener letras minúsculas y mayúsculas del alfabeto inglés, espacios, números y signos de puntuación.
 
-## Use the functions 
+La aplicación debe cifrar o descifrar únicamente las letras minúsculas y mayúsculas. Los espacios, números y signos de puntuación deben permanecer sin cambios durante el cifrado o el descifrado.
 
-Create two functions: one for encrypting messages and one for decrypting messages. Use the created functions in your main program.
+En la primera línea de entrada aparece el mensaje `m`, de como máximo cien caracteres; en la segunda línea, el número entero `n`, que representa el valor del desplazamiento ($1 \leq n < 26$); y en la tercera línea, el número entero `s`, que representa la dirección del cifrado. Si $s=1$, se debe cifrar `m`, y si $s=2`, se debe descifrar `m`.
 
-Here you can work in pairs - one person should encrypt the message, and the other should decrypt it!
 
-## Create a Class
+## Utiliza funciones
 
-Create a `CaesarCipher` class that contains:
+ Crea dos funciones: una para cifrar mensajes y otra para descifrarlos. Utiliza las funciones creadas en el programa principal.
 
-- a constructor with a parameter that accepts a shift value and ensures that the value is in the allowed range (0–25),
-- a private property for storing the shift value, with getter and setter methods,
-- a public method for encrypting a message,
-- a public method for decrypting a message, and
-- optionally, a private method for processing messages that is used by both methods.
+¡Aquí podéis trabajar por parejas: una persona debe cifrar el mensaje y la otra debe descifrarlo!
 
-Use the created class in the main program.
 
-## Accept command-line arguments
+## Crea una clase
 
-Instead of waiting for user input, create a console application that accepts the following command-line arguments:
+Crea una clase `CaesarCipher` que contenga:
 
-1. argument `m` for the message,
-2. argument `n` for the shift value (`0` to `25`), and
-3. argument `s` for the encryption direction (`1` for encryption, `2` for decryption).
+- un constructor con un parámetro que acepte el valor del desplazamiento y garantice que está dentro del intervalo permitido,
+- una propiedad privada para almacenar el valor del desplazamiento, con métodos getter y setter,
+- un método público para cifrar mensajes,
+- un método público para descifrar mensajes y
+- opcionalmente, un método privado para procesar mensajes que utilicen ambos métodos.
 
-## Encrypt and decrypt files
+Utiliza la clase creada en el programa principal.
 
-Use your knowledge so far to create a console application for encrypting and decrypting text files using the Caesar cipher.
 
-The application should accept the following command-line arguments:
+## Acepta argumentos de la línea de comandos
 
-1. argument `m` for the file name (or path),
-2. argument `n` for the shift value (`0` to `25`), and
-3. argument `s` for the encryption direction (`1` for encryption, `2` for decryption).
+En lugar de esperar la entrada del usuario, crea una aplicación de consola que acepte los siguientes argumentos de la línea de comandos:
+
+1. el argumento `m` para el mensaje,
+2. el argumento `n` para el valor del desplazamiento (`0` a `25`), y
+3. el argumento `s` para la dirección del cifrado (`1` para cifrar, `2` para descifrar).
+
+
+## Cifra y descifra archivos
+
+Utiliza los conocimientos adquiridos hasta ahora para crear una aplicación de consola que cifre y descifre archivos de texto. Tu aplicación debe aceptar los siguientes argumentos de la línea de comandos:
+
+1. el argumento `m` para el nombre del archivo (o la ruta),
+2. el argumento `n` para el valor del desplazamiento (`0` a `25`), y
+3. el argumento `s` para la dirección del cifrado (`1` para cifrar, `2` para descifrar).

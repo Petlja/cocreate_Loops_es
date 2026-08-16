@@ -1,51 +1,51 @@
-# Collaboration on Task-Solving - Pair Programming in the Classroom
 
-In IT companies today, Agile (agile) methodology is one of the most popular and widely used software development methodologies — especially where the teams need to deliver working software quickly, collaboratively, and adaptively. **Pair programming** (pair programming) is a core practice in Extreme Programming (XP), which is one of the Agile methodologies.
+# Colaboración en la resolución de tareas: programación por parejas en el aula
 
-It is a collaborative software development technique where two developers work together at one computer. One developer, called the **driver** (driver), writes the code and focuses on syntax, while the other developer, called the **navigator** (navigator), reviews each line of code as it is typed, looks out for mistakes, asks questions, and suggests improvements. The two developers switch roles frequently.
+En las empresas de tecnología actuales, la metodología ágil (en inglés, agile) es uno de los métodos de desarrollo de software más populares y extendidos, especialmente allí donde los equipos deben entregar software funcional de forma rápida, colaborativa y flexible. La **programación por parejas** (en inglés, pair programming) es una práctica fundamental de Extreme Programming (XP), que es una de las metodologías ágiles.
 
-It is very easy to transfer this practice from IT companies to high school computer classrooms. In the classroom, two students share one computer to solve a programming task together. One student types the code, while the other checks the code, gives suggestions, and thinks about the next steps. After each subtask, they switch roles. Pair programming helps students learn by working together, practicing teamwork, sharing ideas, and seeing different ways to solve the same problems.
+Es una técnica de desarrollo de software en equipo en la que dos programadores trabajan juntos frente a un mismo ordenador. Un programador, llamado **conductor** (en inglés, driver), escribe el código y se centra en la sintaxis, mientras que el otro, el **navegador** (en inglés, navigator), revisa cada línea de código mientras se escribe, busca errores, hace preguntas y propone mejoras. Los programadores cambian de rol con frecuencia.
+
+Esta práctica se puede trasladar fácilmente de las empresas de tecnología a las aulas de informática. En el aula, dos estudiantes comparten un ordenador para resolver juntos una tarea de programación. Un estudiante escribe el código, mientras que el otro lo revisa, hace sugerencias y piensa en los siguientes pasos. Después de cada subtarea, cambian de rol. La programación por parejas ayuda a los estudiantes a aprender mediante la colaboración, practicar el trabajo en equipo, intercambiar ideas y conocer distintas formas de resolver los mismos problemas.
 
 ```{infonote} 
-To successfully master this lesson you will need to work in pairs!
+¡Para completar con éxito esta lección, tendréis que trabajar por parejas!
 ```
 
-## Learning Objectives and Time
+## Resultados y duración
 
-**Required time:** 3 school periods (135 minutes)
+**Tiempo necesario:** 3 clases escolares (135 minutos)
 
-### Learning Objectives
+### Resultados
 
-- To understand the structure and purpose of loops, and their use in manipulation and transformation of the text.
-- To understand the principles behind simple cryptographic algorithms and to implement these algorithms in a chosen programming language using loops.
-- To understand how computers protect privacy and prevent information abuse, as well as how text can be transformed into ciphertext and back.
+- Comprender la estructura y el propósito de los bucles, así como su uso para manipular y transformar texto.
+- Comprender los principios de algoritmos criptográficos sencillos e implementarlos en el lenguaje de programación elegido utilizando bucles.
+- Comprender cómo protegen los ordenadores la privacidad y evitan el uso indebido de la información, así como la forma de ocultar, mezclar y proteger el texto frente a accesos no autorizados.
 
-## Expected Outcomes
+## Resultados esperados
 
-After completing the lesson, students will be able to:
+Al finalizar la lección, los estudiantes podrán:
 
-- Correctly write code with loops that implements the Caesar cipher with encryption and decryption functions.
-- Write and explain the implementation of the XOR cipher using loops.
-- Construct the Skytale cipher using loops.
-- Recognize which type of loop is suitable for different text processing tasks.
-- Effectively work in pairs applying pair programming, effectively communicate, and present results in a clear and confident manner.
+- Escribir correctamente código con bucles que implemente un cifrador César con funciones de cifrado y descifrado.
+- Escribir y explicar la implementación de un cifrado XOR mediante bucles.
+- Construir un cifrado escítala utilizando bucles.
+- Reconocer qué tipo de bucle es adecuado para distintas tareas de procesamiento de texto.
+- Trabajar eficazmente por parejas aplicando la programación por parejas, comunicarse con éxito y presentar los resultados de forma clara y segura.
 
+```{learnmorenote} Para docentes
 
-```{learnmorenote} For teachers
+## Ventajas del trabajo por parejas para los estudiantes
 
-## Benefits of Pair Work for Students
+- **Aprendizaje entre iguales:** Los estudiantes aprenden unos de otros. Los principiantes se benefician de trabajar con compañeros con más experiencia, y todos refuerzan su comprensión al explicar su forma de pensar. Además, el conocimiento compartido permite resolver los problemas más rápidamente.
+- **Soluciones de mayor calidad:** Un segundo par de ojos ayuda a detectar antes los errores. La retroalimentación inmediata suele conducir a mejores soluciones y a un código más limpio.
+- **Mayor implicación:** El trabajo por parejas mantiene activos y concentrados a ambos estudiantes. La comunicación de ideas profundiza la comprensión y desarrolla las habilidades de trabajo en equipo.
 
-- **Peer Learning:** Students learn from each other. Beginners benefit from working with more experienced classmates, and everyone strengthens their understanding through discussion.
-- **Higher Quality Solutions:** A second pair of eyes helps spot errors early. Immediate feedback prevents bad practices from taking root.
-- **Greater Engagement:** Pair work keeps both students active and focused. Communicating ideas deepens learning more than solitary coding.
+## Desafíos en el aula
 
-## Challenges in the Classroom
+¡Los docentes deben prestar atención a los siguientes posibles desafíos al aplicar la programación por parejas!
 
-Teachers should pay attention to the following possible challenges when applying pair programming!
-
-- **Personality Clashes:** Differences in communication style or skill level can lead to frustration. Students must learn to work respectfully, even when they disagree.
-- **Uneven Participation:** One student may try to take over everything. The teacher must monitor regular role switching to ensure balanced involvement.
-- **Mental Fatigue:** Long sessions can be mentally exhausting. Well-defined tasks help maintain focus and energy.
+- **Diferencias de personalidad:** Las diferencias en el estilo de comunicación o en el nivel de conocimientos pueden causar frustración. Los estudiantes deben aprender a trabajar con respeto, incluso cuando no están de acuerdo.
+- **Participación desigual:** Un estudiante puede intentar asumirlo todo. El docente debe supervisar el cambio regular de roles para que ambos estudiantes participen en igualdad de condiciones.
+- **Cansancio:** Las sesiones largas pueden resultar agotadoras mentalmente. Unas tareas bien definidas ayudan a mantener la concentración y la energía.
 ```
 
-Best practice in pair programming recommends changing roles after each subtask, so both students remain engaged and learn complementary skills. A typical approach is: spend 15–20 minutes per role, then swap.
+La mejor práctica de la programación por parejas recomienda cambiar de rol después de cada subtarea para que ambos estudiantes sigan implicados. Los estudiantes deben comunicarse en voz alta, de forma abierta y respetuosa, explicando qué hacen o en qué están pensando. Si ambos se quedan atascados, deben pedir ayuda al docente: ¡eso también forma parte del aprendizaje!

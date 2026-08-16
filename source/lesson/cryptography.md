@@ -1,71 +1,82 @@
-# Introduction to the History of Cryptography and the Importance of Cryptography in the Modern World
 
-Since ancient times, when people began to write, there has been a need to hide certain written text, i.e., to encrypt it so that only authorized persons could read it. Cryptography has always played an important role throughout history. Let's look at a brief history of cryptography.
+# Introducción a la historia de la criptografía y su importancia en el mundo moderno
 
-> **Cryptography** is a scientific discipline that deals with the development of systems for encrypting information. The word "cryptography" comes from the Greek words "kryptos" (hidden, secret) and "graphia" (writing), so it literally means "secret writing."
+Desde la antigüedad, cuando las personas comenzaron a escribir, existió la necesidad de ocultar o proteger algunos textos escritos. Con el desarrollo de técnicas para ocultar la información registrada, surgió un nuevo campo científico: la criptografía.
 
-The first book on cryptography, entitled "Book of Cryptic Messages," was written, according to historical sources, by a Moroccan scientist Al-Kindi in the 9th century. He introduced the concept of frequency analysis of letters in a message.
+> La **criptografía** es la disciplina científica que se ocupa del desarrollo de sistemas para cifrar información. La palabra criptografía proviene de las palabras griegas κρυπτός (*oculto, secreto*) y γράφειν (*escribir*).
 
-> **Cryptanalysis** is a scientific discipline that studies methods for "breaking" cryptographic systems. The word comes from the Greek words "kryptos" (hidden, secret) and "analysis" (to break apart, to analyze).
+El filósofo árabe Al-Jalil (717–786) escribió, según las fuentes históricas, el primer libro sobre criptografía, titulado «Libro de los mensajes cifrados». En él se utilizaron por primera vez permutaciones y combinaciones para enumerar todas las palabras árabes con y sin vocales. Sin embargo, los métodos clásicos de cifrado suelen revelar patrones estadísticos del mensaje original, que pueden utilizarse para romper el cifrado.
 
-The first known treatise on cryptography was written on 25 pages by Italian architect Leon Battista Alberti in 1468. He presented a cipher that used multiple substitution alphabets to encrypt a single message.
+Tras descubrir el análisis de frecuencia de las letras de un mensaje, el matemático árabe Al-Kindi escribió en el siglo IX el libro «Manuscrito para descifrar mensajes cifrados», en el que se describió por primera vez el uso de técnicas de análisis de frecuencia.
 
-![French cipher machine in the form of a book from the 16th century](./images/cyphermachine.jpg)
+> El **criptoanálisis** es la disciplina científica que estudia los métodos para «romper» sistemas criptográficos. La palabra criptoanálisis proviene de las palabras griegas κρυπτός (*oculto, secreto*) y αναλύειν (*analizar*).
 
-In the 19th century, it was concluded that cryptography should not rely on the secrecy of encryption algorithms, but on the secrecy of the key used for encryption (Kerckhoffs's principle).
 
-During World War II, the Germans created a machine called the **Enigma** that encrypted messages in a previously unprecedented way. The Enigma machine was considered unbreakable, but British cryptanalysts, led by Alan Turing, successfully broke it, which had a significant impact on the course of the war.
+El primer tratado conocido sobre criptografía fue escrito en 1467, en 25 páginas, por el arquitecto italiano Leone Battista Alberti. También fue el creador del disco de cifrado y de otras soluciones para ocultar textos en dos capas. En el siglo XVI realizaron contribuciones importantes el médico milanés Girolamo Cardano, el matemático Battista Porta y el diplomático francés Blaise de Vigenère.
+
+
+![Máquina francesa de cifrado con forma de libro del siglo XVI](./images/cyphermachine.jpg)
+
+
+En el siglo XIX se llegó a la conclusión de que la criptografía no debe depender del secreto de los algoritmos de cifrado, sino del secreto de la clave. El secreto de la propia clave debe ser suficiente para impedir que se rompa el mensaje cifrado. Esto se convirtió en uno de los principios fundamentales de la criptografía, formulado en 1883 por Auguste Kerckhoffs (principio de Kerckhoffs). Claude Shannon, fundador de la teoría de la información y figura clave de la criptografía teórica, lo repitió de forma aún más explícita en su máxima: «el enemigo conoce el sistema».
+
+
+Durante la Segunda Guerra Mundial, los alemanes crearon una máquina llamada **Enigma**, que cifraba mensajes de una forma nunca vista hasta entonces. Sin embargo, por muy revolucionaria que fuera en su época, los Aliados, liderados por Alan Turing, lograron romper el sistema criptográfico Enigma mediante el criptoanálisis.
 
 ![Enigma](./images/enigma.jpg)
 
-## Present
 
-After World War II, with the development of information technology, cryptology, as the science of protecting information and the entire field of communication security, became increasingly important.
+## El presente
 
-Today, in cryptography we talk about **symmetric** encryption, where the same key is used for both encryption and decryption. The key must be kept secret and shared securely between parties.
+Después de la Segunda Guerra Mundial, con el desarrollo de las tecnologías de la información, la criptología, como ciencia de la protección de la información, y sus subdisciplinas científicas adquirieron cada vez más importancia. Los ordenadores modernos pueden romper cifrados sencillos a una velocidad increíble, por lo que los algoritmos criptográficos se han vuelto mucho más avanzados.
 
-![Symmetric encryption](./images/symmetric.png)
 
-On the other hand, when it's important to securely exchange keys, prove who sent the message, or sign documents, we use **asymmetric** encryption (also called public-key cryptography). In this case, each party has a public key (which can be shared with anyone) and a private key (which must be kept secret).
+Hoy en día, en criptografía se habla de cifrado **simétrico**, en el que se utiliza la misma clave para cifrar y descifrar. El cifrado simétrico es más rápido y adecuado para grandes cantidades de datos. Se utiliza cuando es necesario proteger datos rápidamente, por ejemplo, para cifrar archivos en un ordenador, cifrar la comunicación durante una videollamada o proteger datos en un disco o dispositivo USB.
 
-![Asymmetric encryption](./images/asymmetric.png)
+![Cifrado simétrico](./images/symmetric.png)
 
-Another important tool is the cryptographic hash function, which creates a unique digital fingerprint of data and is widely used in password protection and digital signatures.
+Por otro lado, cuando es importante intercambiar claves de forma segura, demostrar quién envió un mensaje o firmar un documento con una firma digital, utilizamos el cifrado **asimétrico**, en el que se emplea un par de claves pública y privada:
 
-## Future
+![Cifrado asimétrico](./images/asymmetric.png)
 
-Looking ahead, quantum cryptography is expected to become the foundation of secure communication. It is based on quantum mechanics principles and promises unconditional security.
+
+Otra herramienta importante es la función hash criptográfica, que crea una huella digital única de los datos y se utiliza ampliamente para proteger contraseñas, en firmas digitales y en la tecnología blockchain.
+
+
+## El futuro
+
+De cara al futuro, se espera que la criptografía cuántica se convierta en la base de las comunicaciones seguras. Se fundamenta en el principio de incertidumbre de Heisenberg de la física cuántica. Sin embargo, la computación cuántica también representa una amenaza para muchos de los algoritmos criptográficos que se utilizan hoy, lo que ha impulsado el desarrollo de la criptografía poscuántica.
 
 ![Google Quantum AI](./images/google.jpg)
 
-The importance of cryptology in modern society is immeasurable. Cryptographic systems provide privacy for electronic communications, protection from identity theft, secure online transactions, and preservation of national security. Without cryptography, modern digital society simply could not function.
+La importancia de la criptología en la sociedad moderna es incalculable. Los sistemas criptográficos garantizan la privacidad de las comunicaciones electrónicas, permiten realizar comercio electrónico seguro, protegen las criptomonedas y, en algunos países, incluso garantizan la votación electrónica y el recuento de votos. Sin embargo, también plantean numerosos dilemas éticos. ¡Prepárate para debatirlos!
 
 ## Debate
 
-**Debate topic: Should the right to privacy be more important than society's security?**
+**Tema del debate: ¿Debe el derecho a la privacidad ser más importante que la seguridad de la sociedad?**
 
-Role division
+Distribución de roles
 
-Team A – For strong privacy protection
+Equipo A: a favor de una protección firme de la privacidad
 
-Every person has the right to private communication.
-Encryption protects citizens from abuse, identity theft, and surveillance.
-No one, not even the state, should have access to private messages.
+Toda persona tiene derecho a comunicarse de forma privada.
+El cifrado protege a los ciudadanos frente al uso indebido, el robo de identidad y la vigilancia.
+Nadie, ni siquiera el Estado, debería tener acceso a los mensajes privados.
 
-Team B – For greater control for security
+Equipo B: a favor de un mayor control por motivos de seguridad
 
-Complete encryption can help criminals and terrorists hide their activities.
-Security services sometimes need access to communication to protect citizens.
-Society must find a balance between privacy and security.
+El cifrado total puede ayudar a delincuentes y terroristas a ocultar sus actividades.
+En ocasiones, los servicios de seguridad deben tener acceso a las comunicaciones para proteger a los ciudadanos.
+La sociedad debe encontrar un equilibrio entre privacidad y seguridad.
 
-You can conduct consideration of arguments in groups between two classes or during the class, followed by exchange of stances and experiences. You can also consider additional questions:
+Podéis analizar los argumentos en grupos entre dos clases o durante la propia clase; después se intercambiarán los puntos de vista (cada grupo tendrá 5 minutos para explicar su postura). A continuación, los demás estudiantes, que actuarán como jurado, harán preguntas y ambos grupos tendrán unos 10 minutos para responder.
 
-Assessment and determining the winning group is not necessary, but a joint discussion of all stated arguments is desirable.
+No es necesario evaluar ni determinar qué grupo gana, pero sí es recomendable mantener un debate conjunto sobre todos los argumentos expuestos. Algunas preguntas adicionales para el debate pueden ser:
+¿Debería la policía tener derecho a acceder a los mensajes cifrados de personas sospechosas?
+¿Aceptarías que se analizaran tus mensajes si eso evitara un atentado terrorista?
+¿Qué riesgos existen si alguien tiene acceso a todos nuestros datos?
+¿Son las redes sociales suficientemente transparentes respecto a los datos que recopilan?
+¿Son los jóvenes conscientes de cuántos datos personales dejan en internet?
+¿Es suficiente una contraseña para proteger una cuenta o se necesitan medidas de seguridad adicionales?
 
-Additional questions to consider:
-Should the police have the right to access encrypted messages of suspects?
-Would you agree to have your messages analyzed if it could prevent a terrorist attack?
-What are the risks if someone has access to all our data?
-Are social networks transparent enough about the data they collect?
-Are young people aware of how much personal information they leave on the internet?
-Is a password enough to protect an account or are additional security measures needed?
+

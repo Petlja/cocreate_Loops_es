@@ -1,12 +1,13 @@
-# Good collaboration rules
+# Reglas para una buena colaboración
 
-When working in pairs or groups as expected in this lesson, pay attention to the following rules:
+Al trabajar en parejas o grupos, como se espera en esta lección, ten en cuenta las siguientes reglas:
 
-1. We are all equally valuable members of the group and share responsibilities equally.
-2. We foster a good atmosphere even when we think differently.
-3. We help everyone contribute to group work.
-4. We strive to involve everyone in decision-making.
-5. The more ideas we consider, the more certain we are that we have selected the best one.
-6. We expound every idea, weigh arguments, and devise solutions.
-7. We wisely use our time to work on the task.
-8. We monitor our progress and contemplate our next step.
+1. Todos somos miembros igualmente valiosos del grupo y compartimos las responsabilidades de manera equitativa.
+2. Fomentamos un buen ambiente incluso cuando pensamos de forma diferente.
+3. Ayudamos a todos a contribuir al trabajo del grupo.
+4. Procuramos incluir a todos en la toma de decisiones.
+5. Cuantas más ideas consideremos, más seguros estaremos de haber elegido la mejor.
+6. Explicamos cada idea, evaluamos los argumentos y diseñamos soluciones.
+7. Utilizamos el tiempo de trabajo en la tarea de manera inteligente.
+8. Seguimos el progreso y pensamos en el siguiente paso.
+

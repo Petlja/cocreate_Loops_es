@@ -1,50 +1,53 @@
-# Independent Knowledge Check
+# Comprobación individual de conocimientos
 
 ```{mchoice}
 :answer1: for
 :answer2: foreach
 :answer3: while
-:answer4: None of the above
+:answer4: Ninguna de las anteriores
 :correct: 3
 
-Which loop is most suitable when we do not know in advance how many times the procedure will be repeated?
+¿Qué bucle es más adecuado cuando no sabemos de antemano cuántas veces se repetirá el procedimiento?
 ```
 
 ```{mchoice}
-:answer1: Each letter is replaced by the previous and next letter, and one of them is chosen randomly
-:answer2: Each letter is replaced by a letter shifted by a fixed number of positions in the alphabet
-:answer3: Letters are grouped into pairs and then swapped within each pair
-:answer4: All vowels are removed, and the remaining letters are moved to the end of the text
+:answer1: Cada letra se sustituye por la letra anterior y la siguiente, y se elige una de ellas al azar
+:answer2: Cada letra se sustituye por otra que está desplazada un número fijo de posiciones en el alfabeto
+:answer3: Las letras se agrupan por parejas y después intercambian sus posiciones en cada pareja
+:answer4: Se eliminan todas las vocales y las letras restantes se desplazan al final del texto
 :correct: 2
 
-Caesar cipher works by:
+El cifrado César funciona de la siguiente manera:
 ```
+
 
 ```{mchoice}
-:answer1: Uses a different key for encryption and decryption
-:answer2: Works only with text, not numbers
-:answer3: The same procedure is used for both encryption and decryption
-:answer4: Can be used only once
+:answer1: Utiliza una clave diferente para cifrar y descifrar
+:answer2: Funciona únicamente con texto, no con números
+:answer3: Se utiliza el mismo procedimiento para cifrar y descifrar
+:answer4: Solo se puede utilizar una vez
 :correct: 3
 
-XOR encryption is special because:
+El cifrado XOR es especial porque:
 ```
 
-Now for the group task! Set aside at least 30 minutes for this activity!
+¡Ahora, una tarea grupal! ¡Dedica al menos 30 minutos a esta actividad!
 
-## Cryptolab
+## Criptolaboratorio
 
-### Step 1 – Encryption
-Students are divided into pairs. Each pair draws one method:
-• Caesar (e.g. shift +3)
-• Scytale (e.g. 3 rows)
-• XOR (simple key, e.g. 5)
-The task is for students, working collaboratively in pairs, to encrypt a sentence or sentences assigned by the teacher (e.g. Knowledge is power or Programming is fun).
+### Paso 1: Cifrado
+Los estudiantes se dividen en parejas. Cada pareja extrae un método:
+•	César (por ejemplo, desplazamiento +3)
+•	Escítala (por ejemplo, 3 filas)
+•	XOR (una clave sencilla, por ejemplo, 5)
+La tarea consiste en que los estudiantes cifren colaborativamente una frase o varias frases propuestas por el docente (por ejemplo, «El conocimiento es poder» o «Programar es divertido»).
 
-### Step 2 – Mixing
-• All encrypted messages are placed in an “envelope” (or a digital file).
-• Pairs draw one message they did not create.
+### Paso 2: Mezcla
+•	Todos los mensajes cifrados se colocan en un «sobre» (o en un archivo digital).
+•	Cada pareja extrae un mensaje que no ha creado.
 
-### Step 3 – Decryption (without knowing the method)
-Now each pair has the task of decrypting the drawn message while not knowing which encryption method was used. First, they need to determine which method was used, then decrypt the message, and then explain how they arrived at the solution.
-It is important to limit the time for this activity and explain to students that it is okay if they do not manage to decrypt everything. The teacher or a peer is there to clarify the examples that the pairs struggled with and could not solve.
+### Paso 3: Descifrado (sin conocer el método)
+Ahora cada pareja tiene la tarea de descifrar el mensaje extraído sin saber qué método de cifrado se ha utilizado. Por tanto, primero debe determinar qué método se utilizó, después descifrar el mensaje y, finalmente, explicar cómo llegó a la solución.
+En esta actividad es importante limitar el tiempo y explicar a los estudiantes que no pasa nada si no consiguen descifrar el mensaje. El docente o un compañero puede aclarar los ejemplos con los que las parejas hayan tenido dificultades y que no hayan conseguido resolver.
+
+
