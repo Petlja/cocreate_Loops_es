@@ -1,132 +1,82 @@
-# Una Breve Introducción a la Criptografía
 
-Desde la antigüedad, cuando las personas comenzaron a escribir, ha existido la necesidad de mantener
-algunos textos escritos en secreto. Al desarrollar técnicas para ocultar información registrada,
-surgió un nuevo campo científico – la criptografía.
+# Introducción a la historia de la criptografía y su importancia en el mundo moderno
 
-> **La criptografía** es una disciplina científica que se ocupa del desarrollo
-> de sistemas para cifrar información. La palabra criptografía proviene de las
-> palabras griegas kryptós (*oculto, secreto*) y graphein (*escribir*).
+Desde la antigüedad, cuando las personas comenzaron a escribir, existió la necesidad de ocultar o proteger algunos textos escritos. Con el desarrollo de técnicas para ocultar la información registrada, surgió un nuevo campo científico: la criptografía.
 
-En India, escritos de hace 2000 años hablan de dos tipos de cifrado – el primer
-tipo se basaba en la sustitución de letras según sus relaciones fonéticas,
-y el segundo en un alfabeto codificado mediante el emparejamiento de letras y el uso
-de letras recíprocas. En Persia, el actual Irán, también había dos tipos de
-cifrado – el primer guíón real se usaba para la correspondencia oficial dentro
-del reino, y el segundo para la comunicación con otros estados.
+> La **criptografía** es la disciplina científica que se ocupa del desarrollo de sistemas para cifrar información. La palabra criptografía proviene de las palabras griegas κρυπτός (*oculto, secreto*) y γράφειν (*escribir*).
 
-El primer libro sobre criptografía, titulado "El Libro de los Mensajes Criptográficos"
-según fuentes históricas, fue escrito por el filósofo árabe Al-Khalil
-(717–786), en el que se utilizan por primera vez permutaciones y combinaciones
-para enumerar todas las palabras árabes con y sin vocales. Sin embargo, los métodos de cifrado
-clásicos a menudo revelan patrones estadísticos sobre el mensaje original, que pueden
-aprovecharse para descifrar el código.
+El filósofo árabe Al-Jalil (717–786) escribió, según las fuentes históricas, el primer libro sobre criptografía, titulado «Libro de los mensajes cifrados». En él se utilizaron por primera vez permutaciones y combinaciones para enumerar todas las palabras árabes con y sin vocales. Sin embargo, los métodos clásicos de cifrado suelen revelar patrones estadísticos del mensaje original, que pueden utilizarse para romper el cifrado.
 
-![Manuscrito de Kindi sobre el descifrado de mensajes criptográficos](./images/kindi.jpg)
+Tras descubrir el análisis de frecuencia de las letras de un mensaje, el matemático árabe Al-Kindi escribió en el siglo IX el libro «Manuscrito para descifrar mensajes cifrados», en el que se describió por primera vez el uso de técnicas de análisis de frecuencia.
 
-Tras el descubrimiento del análisis de frecuencia de letras en un mensaje, el
-matemático árabe Al-Kindi escribió el libro "Manuscrito para el Descifrado de
-Mensajes Criptográficos" en el siglo IX, en el que se describió por primera vez
-el uso de técnicas de análisis de frecuencia.
+> El **criptoanálisis** es la disciplina científica que estudia los métodos para «romper» sistemas criptográficos. La palabra criptoanálisis proviene de las palabras griegas κρυπτός (*oculto, secreto*) y αναλύειν (*analizar*).
 
-> **El criptoanálisis** es la disciplina científica que estudia métodos para
-> "quebrar" sistemas criptográficos. La palabra criptoanálisis proviene de las palabras
-> griegas kryptós (*oculto, secreto*) y analýein (*análisis*).
 
-El primer tratado conocido sobre criptografía fue escrito en 25 páginas por el arquitecto italiano
-Leone Battista Alberti en 1467. Él es también el creador del círculo cifrador
-y otras soluciones para el ocultamiento de texto en doble capa. Medio siglo
-despus, se publicó la obra de Johannes Trithemus sobre criptografía en cinco volúmenes.
-En el siglo XVI, realizaron contribuciones significativas el médico milanés
-Girolamo Cardano, el matemático Battista Porta y el diplomático francés
-Blaise de Vigenere.
+El primer tratado conocido sobre criptografía fue escrito en 1467, en 25 páginas, por el arquitecto italiano Leone Battista Alberti. También fue el creador del disco de cifrado y de otras soluciones para ocultar textos en dos capas. En el siglo XVI realizaron contribuciones importantes el médico milanés Girolamo Cardano, el matemático Battista Porta y el diplomático francés Blaise de Vigenère.
 
-![Máquina Cifrada Francesa en Forma de Libro del Siglo XVI](./images/cyphermachine.jpg)
 
-En el siglo XIX, se llegó a la conclusión de que la criptografía no debía basarse en el
-secreto de los algoritmos de cifrado, sino en el secreto de la clave. El
-secreto de la propia clave debe ser suficiente para evitar que el mensaje cifrado
-sea descifrado. Esto se convirtió en uno de los principios fundamentales de
-la criptografía, escrito en 1883 por Auguste Kerckhoffs (Principio de Kerckhoffs).
-De forma más explícita, fue reiterado por Claude Shannon, el fundador
-de la Teoría de la Información y figura clave en la criptografía teórica, como
-la Máxima de Shannon: "el enemigo conoce el sistema".
+![Máquina francesa de cifrado con forma de libro del siglo XVI](./images/cyphermachine.jpg)
 
-Durante la Segunda Guerra Mundial, los alemanes construyeron una máquina llamada Enigma que
-cifraba mensajes de una forma nunca vista antes. Sin embargo, por revolucionaria que
-fuera en su momento, los Aliados, liderados por Alan Turing, fueron capaces de descifrar el
-sistema criptográfico Enigma mediante el criptoanálisis.
+
+En el siglo XIX se llegó a la conclusión de que la criptografía no debe depender del secreto de los algoritmos de cifrado, sino del secreto de la clave. El secreto de la propia clave debe ser suficiente para impedir que se rompa el mensaje cifrado. Esto se convirtió en uno de los principios fundamentales de la criptografía, formulado en 1883 por Auguste Kerckhoffs (principio de Kerckhoffs). Claude Shannon, fundador de la teoría de la información y figura clave de la criptografía teórica, lo repitió de forma aún más explícita en su máxima: «el enemigo conoce el sistema».
+
+
+Durante la Segunda Guerra Mundial, los alemanes crearon una máquina llamada **Enigma**, que cifraba mensajes de una forma nunca vista hasta entonces. Sin embargo, por muy revolucionaria que fuera en su época, los Aliados, liderados por Alan Turing, lograron romper el sistema criptográfico Enigma mediante el criptoanálisis.
 
 ![Enigma](./images/enigma.jpg)
 
-La criptografía y el criptoanálisis son las dos disciplinas principales de la criptología.
 
-> **La criptología** es la ciencia que se ocupa de los distintos aspectos de la seguridad
-> de la información. La palabra criptología proviene de las palabras griegas kryptós (*oculto,
-> secreto*) y logos (*ciencia*).
+## El presente
 
-## Presente
+Después de la Segunda Guerra Mundial, con el desarrollo de las tecnologías de la información, la criptología, como ciencia de la protección de la información, y sus subdisciplinas científicas adquirieron cada vez más importancia. Los ordenadores modernos pueden romper cifrados sencillos a una velocidad increíble, por lo que los algoritmos criptográficos se han vuelto mucho más avanzados.
 
-Tras la Segunda Guerra Mundial, con el desarrollo de la tecnología de la información, la criptología
-y sus disciplinas científicas se volvieron cada vez más importantes. Los ordenadores modernos
-pueden descifrar códigos simples a velocidades increíbles, por lo que los algoritmos criptográficos se han
-vuelto mucho más avanzados. Hoy en día, la criptografía se divide generalmente en
-cifrado **simétrico**, donde se usa la misma clave tanto para cifrar como para
-descifrar...
+
+Hoy en día, en criptografía se habla de cifrado **simétrico**, en el que se utiliza la misma clave para cifrar y descifrar. El cifrado simétrico es más rápido y adecuado para grandes cantidades de datos. Se utiliza cuando es necesario proteger datos rápidamente, por ejemplo, para cifrar archivos en un ordenador, cifrar la comunicación durante una videollamada o proteger datos en un disco o dispositivo USB.
 
 ![Cifrado simétrico](./images/symmetric.png)
 
-...y cifrado **asimétrico**, donde se utiliza un par de claves pública y privada:
+Por otro lado, cuando es importante intercambiar claves de forma segura, demostrar quién envió un mensaje o firmar un documento con una firma digital, utilizamos el cifrado **asimétrico**, en el que se emplea un par de claves pública y privada:
 
 ![Cifrado asimétrico](./images/asymmetric.png)
 
-Otra herramienta esencial es la función hash criptográfica, que crea una
-huella digital única de los datos y se usa ampliamente en la protección de contraseñas,
-firmas digitales y tecnología blockchain.
 
-## El Futuro
+Otra herramienta importante es la función hash criptográfica, que crea una huella digital única de los datos y se utiliza ampliamente para proteger contraseñas, en firmas digitales y en la tecnología blockchain.
 
-De cara al futuro, se espera que la criptografía cuántica se convierta en un pilar de
-la comunicación segura. Se basa en el principio de incertidumbre de Heisenberg de
-la física cuántica. Sin embargo, la computación cuántica también representa una amenaza para muchos
-algoritmos criptográficos en uso hoy en día, lo que ha llevado al desarrollo de
-la criptografía postcuántica.
+
+## El futuro
+
+De cara al futuro, se espera que la criptografía cuántica se convierta en la base de las comunicaciones seguras. Se fundamenta en el principio de incertidumbre de Heisenberg de la física cuántica. Sin embargo, la computación cuántica también representa una amenaza para muchos de los algoritmos criptográficos que se utilizan hoy, lo que ha impulsado el desarrollo de la criptografía poscuántica.
 
 ![Google Quantum AI](./images/google.jpg)
 
-La importancia de la criptología en la sociedad moderna no puede subestimarse.
-Los sistemas criptográficos garantizan la privacidad de las comunicaciones electrónicas,
-habilitan el comercio electrónico seguro, protegen las criptodivisas y en algunos países
-incluso salvaguardan la votación electrónica y el recuento de votos.
-Sin embargo, también surgen numerosas cuestiones éticas. ¡Prepárate para un debate!
+La importancia de la criptología en la sociedad moderna es incalculable. Los sistemas criptográficos garantizan la privacidad de las comunicaciones electrónicas, permiten realizar comercio electrónico seguro, protegen las criptomonedas y, en algunos países, incluso garantizan la votación electrónica y el recuento de votos. Sin embargo, también plantean numerosos dilemas éticos. ¡Prepárate para debatirlos!
 
 ## Debate
 
-**Tema del debate: ¿Debería el derecho a la privacidad ser más importante que la seguridad de la sociedad?**
+**Tema del debate: ¿Debe el derecho a la privacidad ser más importante que la seguridad de la sociedad?**
 
-División de roles
+Distribución de roles
 
-Equipo A – A favor de la fuerte protección de la privacidad
+Equipo A: a favor de una protección firme de la privacidad
 
-Cada persona tiene derecho a la comunicación privada.
-El cifrado protege a los ciudadanos del abuso, el robo de identidad y la vigilancia.
-Nadie, ni siquiera el estado, debería tener acceso a los mensajes privados sin una base legal clara.
+Toda persona tiene derecho a comunicarse de forma privada.
+El cifrado protege a los ciudadanos frente al uso indebido, el robo de identidad y la vigilancia.
+Nadie, ni siquiera el Estado, debería tener acceso a los mensajes privados.
 
-Equipo B – A favor de una mayor supervisión por seguridad
+Equipo B: a favor de un mayor control por motivos de seguridad
 
-El cifrado completo puede ayudar a criminales y terroristas a ocultar sus actividades.
-Los servicios de seguridad a veces necesitan acceso a las comunicaciones para proteger a los ciudadanos.
+El cifrado total puede ayudar a delincuentes y terroristas a ocultar sus actividades.
+En ocasiones, los servicios de seguridad deben tener acceso a las comunicaciones para proteger a los ciudadanos.
 La sociedad debe encontrar un equilibrio entre privacidad y seguridad.
 
-Puedes llevar a cabo la consideración de argumentos en grupos entre dos clases o durante la clase, seguido de un intercambio de puntos de vista (cada equipo tiene 5 minutos para presentar su posición). Otros estudiantes – el jurado – luego hacen preguntas y ambos equipos tienen aproximadamente 10 minutos para responder.
+Podéis analizar los argumentos en grupos entre dos clases o durante la propia clase; después se intercambiarán los puntos de vista (cada grupo tendrá 5 minutos para explicar su postura). A continuación, los demás estudiantes, que actuarán como jurado, harán preguntas y ambos grupos tendrán unos 10 minutos para responder.
 
-La evaluación y determinación del equipo ganador no es necesaria, pero se recomienda una discusión conjunta sobre todas las conclusiones presentadas.
+No es necesario evaluar ni determinar qué grupo gana, pero sí es recomendable mantener un debate conjunto sobre todos los argumentos expuestos. Algunas preguntas adicionales para el debate pueden ser:
+¿Debería la policía tener derecho a acceder a los mensajes cifrados de personas sospechosas?
+¿Aceptarías que se analizaran tus mensajes si eso evitara un atentado terrorista?
+¿Qué riesgos existen si alguien tiene acceso a todos nuestros datos?
+¿Son las redes sociales suficientemente transparentes respecto a los datos que recopilan?
+¿Son los jóvenes conscientes de cuántos datos personales dejan en internet?
+¿Es suficiente una contraseña para proteger una cuenta o se necesitan medidas de seguridad adicionales?
 
-## Preguntas para reflexión
 
-¿Debería la policía tener derecho a acceder a los mensajes cifrados de los sospechosos?
-¿Estarías de acuerdo en que se analicen tus mensajes si eso evitara un ataque terrorista?
-¿Cuáles son los riesgos si alguien tiene acceso a todos nuestros datos?
-¿Son las redes sociales suficientemente transparentes sobre los datos que recopilan?
-¿Son conscientes los jóvenes de cuántos datos personales dejan en Internet?
-¿Es una contraseña suficiente para proteger una cuenta o se necesitan medidas de seguridad adicionales?
