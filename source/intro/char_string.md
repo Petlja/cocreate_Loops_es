@@ -1,19 +1,12 @@
 # Caracteres y cadenas
 
-Comprender cómo se representan los caracteres y las cadenas te ayudará a procesar
-correctamente el texto en la próxima lección y a garantizar un procesamiento adecuado de los datos.
+Entender cómo se representan los caracteres y las cadenas de texto te ayudará a procesar texto correctamente en la siguiente lección y te garantizará que manejes los datos de forma adecuada.
 
-El tipo de datos para caracteres, conocido como char, se utiliza para representar caracteres individuales.
-Como los ordenadores solo pueden almacenar valores binarios, los caracteres deben codificarse como números.
-En los sistemas informáticos modernos se utilizan los esquemas de codificación ASCII o Unicode.
-Los lenguajes de programación más antiguos (por ejemplo, C) suelen utilizar ASCII, mientras que los lenguajes modernos (por ejemplo, C#) admiten Unicode.
-
+El tipo de datos para caracteres, conocido como char, se utiliza para representar caracteres individuales. Como los ordenadores solo pueden almacenar valores binarios, los caracteres deben codificarse como números. En los sistemas informáticos modernos se utilizan esquemas de codificación ASCII o Unicode. Los lenguajes de programación más antiguos (p. ej., C) generalmente utilizan ASCII, mientras que los lenguajes modernos (p. ej., C#) soportan Unicode.
 
 ## ASCII
 
-ASCII *(Código Estándar Estadounidense para el Intercambio de Información)* es un código binario
-de 7 bits, que se representa en la memoria con 8 bits (un byte). Define 128 caracteres,
-incluidas letras, dígitos, signos de puntuación y caracteres de control:
+ASCII *(American Standard Code for Information Interchange)* es un código binario de 7 bits que se representa en memoria con 8 bits (un byte). Define 128 caracteres, que incluyen letras, dígitos, signos de puntuación y caracteres de control:
 
 ```text
 DEC OCT HEX CH    DEC OCT HEX CH    DEC OCT HEX CH    DEC OCT HEX CH
@@ -55,113 +48,104 @@ DEC OCT HEX CH    DEC OCT HEX CH    DEC OCT HEX CH    DEC OCT HEX CH
 
 ## Unicode
 
-Unicode es un conjunto ampliado de caracteres que incluye todos los códigos ASCII como su primera parte.
-En Unicode, los primeros 128 valores de código (de U+0000 a U+007F) son completamente idénticos a los códigos ASCII.
-Además, Unicode define más de 150.000 caracteres de alfabetos de todo el mundo.
-Por ejemplo, las letras latinas específicas del alfabeto serbio se definen así...
+Unicode es un conjunto de caracteres extendido que incluye todos los códigos ASCII en su primera parte. En Unicode, los primeros 128 valores de código (U+0000 a U+007F) son completamente idénticos a los códigos ASCII. Más allá de eso, Unicode define más de 150.000 caracteres de sistemas de escritura en todo el mundo. Por ejemplo, los caracteres latinos específicos del alfabeto serbio se definen de la siguiente manera:
 
-| Código | Símbolo | DEC     |
-|--------|--------|---------|
-| U+0106 | Ć      | 262     |
-| U+0107 | ć      | 263     |
-| U+010C | Č      | 268     |
-| U+010D | č      | 269     |
-| U+0110 | Đ      | 272     |
-| U+0111 | đ      | 273     |
-| U+0160 | Š      | 288     |
-| U+0161 | š      | 289     |
-| U+017D | Ž      | 381     |
-| U+017E | ž      | 382     |
+| Código | Símbolo | DEC |
+|--------|---------|-----|
+| U+0106 | Ć      | 262 |
+| U+0107 | ć      | 263 |
+| U+010C | Č      | 268 |
+| U+010D | č      | 269 |
+| U+0110 | Đ      | 272 |
+| U+0111 | đ      | 273 |
+| U+0160 | Š      | 288 |
+| U+0161 | š      | 289 |
+| U+017D | Ž      | 381 |
+| U+017E | ž      | 382 |
 
+...Las letras latinas escritas con dos caracteres se definen así:
 
-...Las letras latinas que se escriben con dos caracteres se definen así...
+| Código | Símbolo | DEC |
+|--------|---------|-----|
+| U+01C4 | Ǆ      | 452 |
+| U+01C5 | ǅ      | 453 |
+| U+01C6 | ǆ      | 454 |
+| U+01C7 | Ǉ      | 455 |
+| U+01C8 | ǈ      | 456 |
+| U+01C9 | ǉ      | 457 |
+| U+01CA | Ǌ      | 458 |
+| U+01CB | ǋ      | 459 |
+| U+01CC | ǌ      | 460 |
 
-| Código | Símbolo | DEC     |
-|--------|--------|---------|
-| U+01C4 | Ǆ      | 452     |
-| U+01C5 | ǅ      | 453     |
-| U+01C6 | ǆ      | 454     |
-| U+01C7 | Ǉ      | 455     |
-| U+01C8 | ǈ      | 456     |
-| U+01C9 | ǉ      | 457     |
-| U+01CA | Ǌ      | 458     |
-| U+01CB | ǋ      | 459     |
-| U+01CC | ǌ      | 460     |
+...y los caracteres cirílicos del alfabeto serbio se definen así:
 
+| Código | Símbolo | DEC  |
+|--------|---------|------|
+| U+0410 | А      | 1040 |
+| U+0411 | Б      | 1041 |
+| U+0412 | В      | 1042 |
+| U+0413 | Г      | 1043 |
+| U+0414 | Д      | 1044 |
+| U+0402 | Ђ      | 1026 |
+| U+0415 | Е      | 1045 |
+| U+0416 | Ж      | 1046 |
+| U+0417 | З      | 1047 |
+| U+0418 | И      | 1048 |
+| U+0408 | Ј      | 1032 |
+| U+041A | К      | 1050 |
+| U+041B | Л      | 1051 |
+| U+0409 | Љ      | 1033 |
+| U+041C | М      | 1052 |
+| U+041D | Н      | 1053 |
+| U+040A | Њ      | 1034 |
+| U+041E | О      | 1054 |
+| U+041F | П      | 1055 |
+| U+0420 | Р      | 1056 |
+| U+0421 | С      | 1057 |
+| U+0422 | Т      | 1058 |
+| U+040B | Ћ      | 1035 |
+| U+0423 | У      | 1059 |
+| U+0424 | Ф      | 1060 |
+| U+0425 | Х      | 1061 |
+| U+0426 | Ц      | 1062 |
+| U+0427 | Ч      | 1063 |
+| U+040F | Џ      | 1039 |
+| U+0428 | Ш      | 1064 |
+| U+0430 | а      | 1072 |
+| U+0431 | б      | 1073 |
+| U+0432 | в      | 1074 |
+| U+0433 | г      | 1075 |
+| U+0434 | д      | 1076 |
+| U+0452 | ђ      | 1106 |
+| U+0435 | е      | 1077 |
+| U+0436 | ж      | 1078 |
+| U+0437 | з      | 1079 |
+| U+0438 | и      | 1080 |
+| U+0458 | ј      | 1112 |
+| U+043A | к      | 1082 |
+| U+043B | л      | 1083 |
+| U+0459 | љ      | 1113 |
+| U+043C | м      | 1084 |
+| U+043D | н      | 1085 |
+| U+045A | њ      | 1114 |
+| U+043E | о      | 1086 |
+| U+043F | п      | 1087 |
+| U+0440 | р      | 1088 |
+| U+0441 | с      | 1089 |
+| U+0442 | т      | 1090 |
+| U+045B | ћ      | 1115 |
+| U+0443 | у      | 1091 |
+| U+0444 | ф      | 1092 |
+| U+0445 | х      | 1093 |
+| U+0446 | ц      | 1094 |
+| U+0447 | ч      | 1095 |
+| U+045F | џ      | 1119 |
+| U+0448 | ш      | 1096 |
 
-...y las letras cirílicas del alfabeto serbio se definen así:
-
-| Código | Símbolo | DEC     |
-|--------|--------|---------|
-| U+0410 | А      | 1040    |
-| U+0411 | Б      | 1041    |
-| U+0412 | В      | 1042    |
-| U+0413 | Г      | 1043    |
-| U+0414 | Д      | 1044    |
-| U+0402 | Ђ      | 1026    |
-| U+0415 | Е      | 1045    |
-| U+0416 | Ж      | 1046    |
-| U+0417 | З      | 1047    |
-| U+0418 | И      | 1048    |
-| U+0408 | Ј      | 1032    |
-| U+041A | К      | 1050    |
-| U+041B | Л      | 1051    |
-| U+0409 | Љ      | 1033    |
-| U+041C | М      | 1052    |
-| U+041D | Н      | 1053    |
-| U+040A | Њ      | 1034    |
-| U+041E | О      | 1054    |
-| U+041F | П      | 1055    |
-| U+0420 | Р      | 1056    |
-| U+0421 | С      | 1057    |
-| U+0422 | Т      | 1058    |
-| U+040B | Ћ      | 1035    |
-| U+0423 | У      | 1059    |
-| U+0424 | Ф      | 1060    |
-| U+0425 | Х      | 1061    |
-| U+0426 | Ц      | 1062    |
-| U+0427 | Ч      | 1063    |
-| U+040F | Џ      | 1039    |
-| U+0428 | Ш      | 1064    |
-| U+0430 | а      | 1072    |
-| U+0431 | б      | 1073    |
-| U+0432 | в      | 1074    |
-| U+0433 | г      | 1075    |
-| U+0434 | д      | 1076    |
-| U+0452 | ђ      | 1106    |
-| U+0435 | е      | 1077    |
-| U+0436 | ж      | 1078    |
-| U+0437 | з      | 1079    |
-| U+0438 | и      | 1080    |
-| U+0458 | ј      | 1112    |
-| U+043A | к      | 1082    |
-| U+043B | л      | 1083    |
-| U+0459 | љ      | 1113    |
-| U+043C | м      | 1084    |
-| U+043D | н      | 1085    |
-| U+045A | њ      | 1114    |
-| U+043E | о      | 1086    |
-| U+043F | п      | 1087    |
-| U+0440 | р      | 1088    |
-| U+0441 | с      | 1089    |
-| U+0442 | т      | 1090    |
-| U+045B | ћ      | 1115    |
-| U+0443 | у      | 1091    |
-| U+0444 | ф      | 1092    |
-| U+0445 | х      | 1093    |
-| U+0446 | ц      | 1094    |
-| U+0447 | ч      | 1095    |
-| U+045F | џ      | 1119    |
-| U+0448 | ш      | 1096    |
-
-
-Aunque algunas letras latinas y cirílicas parecen iguales, sus valores Unicode son diferentes.
-Por ejemplo, la letra latina mayúscula A está codificada como U+0041, mientras que la letra cirílica mayúscula А está codificada como U+0410.
-
+Algo que vale la pena notar es que aunque algunas letras latinas y cirílicas se ven iguales, sus valores Unicode son diferentes. Por ejemplo, la letra A mayúscula latina se codifica como U+0041, mientras que la letra A mayúscula cirílica se codifica como U+0410.
 
 ## Cadenas
 
-Una cadena es una secuencia de caracteres ordenados en un orden determinado. Cada carácter puede ser una letra, un dígito, un signo de puntuación, un espacio o un símbolo.
-Las cadenas son fundamentales en informática porque representan texto, nombres de archivos, entradas del usuario y mucho más.
+Una cadena es una secuencia de caracteres ordenados en un orden particular. Cada carácter puede ser una letra, un dígito, un signo de puntuación, un espacio, etc. Las cadenas son fundamentales en la informática porque representan texto, nombres de archivos, entrada del usuario y mucho más.
 
-Una cadena suele representarse como un bloque continuo de memoria. Algunos sistemas terminan las cadenas con un marcador especial, como el carácter nulo `\0`, para indicar el final, mientras que otros pueden almacenar explícitamente su longitud.
+Una cadena se representa generalmente como un bloque continuo de memoria. Algunos sistemas terminan las cadenas con un carácter especial, comúnmente el carácter nulo '\0' (en C/C++), mientras que otros almacenan la longitud de la cadena como parte del tipo de datos (en Python o C#).
