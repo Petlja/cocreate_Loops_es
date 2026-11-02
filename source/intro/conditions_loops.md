@@ -2,16 +2,6 @@
 
 Para dominar con éxito el material sobre cifrado, es necesario que entiendas los conceptos básicos sobre cómo funcionan las condiciones y los bucles.
 
-¡Vamos a recordar algunos conceptos fundamentales! Si aún te resulta confusa esta área, te recomendamos que revises la lección en Petlja.
-
-El enlace a la lección de Petlja sobre bucles está [aquí](https://www.petlja.org/sr-Latn-RS/kurs/477/12/5844)
-<!--Link za verzije kursa koje nisu na sprskokm https://petlja.org/en/biblioteka/r/lekcije/python-za-svakog/01_karel_eng_02_for -->
-
-```{learnmorenote} Para maestros
-
-Enlace a la lección de Petlja en serbio https://www.petlja.org/sr-Latn-RS/kurs/477/12/5844
-Enlace para versiones del curso que no estén en serbio https://petlja.org/en/biblioteka/r/lekcije/python-za-svakog/01_karel_eng_02_for
-```
 
 ## Condiciones
 
