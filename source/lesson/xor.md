@@ -1,6 +1,7 @@
+
 # XOR
 
-XOR *(exclusive OR)* is a logical operation that returns true (1) only when the inputs differ. It is a fundamental binary operation in cryptography.
+XOR *(exclusiva O)* es una operación lógica que produce verdadero (1) solo cuando las entradas difieren. Es una operación binaria fundamental utilizada en criptografía.
 
 | A | B | A XOR B |
 | - | - | :-----: |
@@ -9,25 +10,25 @@ XOR *(exclusive OR)* is a logical operation that returns true (1) only when the 
 | 1 | 0 | 1       |
 | 1 | 1 | 0       |
 
-For example, to encrypt the word "HELLO" using the key "KEY", you first need to convert `HELLO` to binary form...
+Por ejemplo, para cifrar la palabra "HELLO" usando la clave "KEY", primero debes convertir `HELLO` a forma binaria...
 
-| Char | ASCII | Binary   |
-| ---- | ----- | -------- |
-| H    | 72    | 01001000 |
-| E    | 69    | 01000101 |
-| L    | 76    | 01001100 |
-| L    | 76    | 01001100 |
-| O    | 79    | 01001111 |
+| Carácter | ASCII | Binario  |
+| -------- | ----- | -------- |
+| H        | 72    | 01001000 |
+| E        | 69    | 01000101 |
+| L        | 76    | 01001100 |
+| L        | 76    | 01001100 |
+| O        | 79    | 01001111 |
 
-...then convert `KEY` to binary form...
+...luego convierte `KEY` a forma binaria...
 
-| Char | ASCII | Binary   |
-| ---- | ----- | -------- |
-| K    | 75    | 01001011 |
-| E    | 69    | 01000101 |
-| Y    | 89    | 01011001 |
+| Carácter | ASCII | Binario  |
+| -------- | ----- | -------- |
+| K        | 75    | 01001011 |
+| E        | 69    | 01000101 |
+| Y        | 89    | 01011001 |
 
-...and finally perform encryption – XOR each character with the key, repeating the key as many times as necessary:
+...y finalmente realiza el cifrado – aplica XOR a cada carácter con la clave, repitiendo la clave tantas veces como sea necesario:
 
 ```text
 H ⊕ K: 01001000 ⊕ 01001011 = 00000011 (ASCII 3)
@@ -37,9 +38,9 @@ L ⊕ K: 01001100 ⊕ 01001011 = 00000111 (ASCII 7)
 O ⊕ E: 01001111 ⊕ 01000101 = 00001010 (ASCII 10)
 ```
 
-The resulting ciphertext consists of ASCII non-printable characters with decimal values 3, 0, 21, 7, and 10. If we represent these as binary, the result would be a binary string: 00000011000000000001010100000111000010100.
+El texto cifrado resultante consta de caracteres ASCII no imprimibles con valores decimales 3, 0, 21, 7 y 10. Si necesitas ver estos valores como números, puedes mostrarlos como su representación binaria o hexadecimal.
 
-To decrypt the ciphertext, you need to XOR the ciphertext with the same key:
+Para descifrar el texto cifrado, debes aplicar XOR al texto cifrado con la misma clave:
 
 ```text
 3  ⊕ K: 00000011 ⊕ 01001011 = 01001000 (ASCII 72 → H)
@@ -49,43 +50,43 @@ To decrypt the ciphertext, you need to XOR the ciphertext with the same key:
 10 ⊕ E: 00001010 ⊕ 01000101 = 01001111 (ASCII 79 → O)
 ```
 
-The XOR operation is self-inverse — applying XOR twice with the same key returns the original data.
+La operación XOR es autoinversa — aplicar XOR dos veces con la misma clave devuelve los datos originales.
 
-In practice, reusing the same key for multiple messages makes XOR encryption vulnerable to frequency analysis and other attacks. However, for educational purposes and basic demonstrations of cryptographic principles, XOR is simple and ideal.
+En la práctica, reutilizar la misma clave para más de un mensaje hace que el cifrado XOR sea vulnerable al análisis de frecuencia y a otros ataques criptográficos. Sin embargo, es un concepto fundamental en criptografía moderna.
 
-## First assignment
+## Tarea simple
 
-Create a console application in any programming language to encrypt and decrypt messages using the XOR operation.
+Crea una aplicación de consola en cualquier lenguaje de programación para cifrar y descifrar mensajes usando el cifrado XOR.
 
-The allowed alphabet for messages (both for plaintext and key) contains only lowercase letters of the English alphabet:
+El alfabeto permitido para los mensajes (tanto para texto plano como para clave) incluye solo las letras minúsculas del alfabeto inglés:
 
 ```text
 Σ = { a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z }
 ```
 
-Spaces, uppercase letters, numbers, and other characters are not allowed.
+No se permiten espacios, letras mayúsculas, números ni otros caracteres.
 
-In the first line of input there is a message `m` of at most one hundred ASCII characters for plaintext or 800 bits for ciphertext. In the second line there is a key `k`. In the third line there is an integer `s` (1 for encryption, 2 for decryption).
+En la primera línea de entrada habrá un mensaje `m` de no más de cien caracteres ASCII para texto plano u 800 bits para texto cifrado. En la segunda línea habrá una clave `k` de no más de cinco caracteres, y en la tercera línea habrá un entero `s`, que representa la operación. Si $s=1$ entonces `m` es texto plano y debe cifrarse, y si $s=2$, entonces `m` es texto cifrado en binario y debe descifrarse.
 
-### Test Example 1
+### Ejemplo de prueba 1
 
-If the input is:
+Si la entrada es:
 
 ```text
-nikolatesla
+nikolateslaa
 ser
 1
 ```
 
-the output should be:
+la salida debe ser:
 
 ```text
 0001110100001100000110010001110000001001000100110000011100000000000000010001111100000100
 ```
 
-### Test Example 2
+### Ejemplo de prueba 2
 
-If the input is:
+Si la entrada es:
 
 ```text
 0001110100001100000110010001110000001001000100110000011100000000000000010001111100000100
@@ -93,54 +94,55 @@ ser
 2
 ```
 
-the output should be:
+la salida debe ser:
 
 ```text
-nikolatesla
+nikolateslaa
 ```
 
-## Do the assignment
+## Pistas para la solución
 
-[Implement the cypher here ](https://arena.petlja.org/sr-Latn-RS/competition/123-co-create#tab_142947)
+Cada carácter se almacena en memoria como un valor ASCII de 8 bits (para letras minúsculas
+a–z, los códigos van del 97 al 122). Para cifrar un carácter, toma su
+valor ASCII y el valor ASCII del carácter de clave correspondiente (ciclando
+por la clave), aplica XOR (^) entre ellos y muestra el resultado como un número binario de 8 bits.
 
-## Solution hints
+Para descifrar, sigue el proceso inverso: toma cada bloque binario de 8 bits del
+texto cifrado, convértelo de nuevo a un entero (0–255), aplica XOR con el valor ASCII del
+carácter de clave correspondiente y convierte el resultado de nuevo a un carácter.
 
-Each character is stored in memory as an 8-bit ASCII value (for lowercase letters a–z, codes range from 97 to 122). To encrypt, convert each character to its ASCII value, convert that to binary (8 bits), XOR with the corresponding key character's binary representation (repeating the key as needed), and output the result as binary text (no spaces between bits).
+## Tareas avanzadas de XOR (opcional)
 
-For decryption, follow the reverse process: take each 8-bit binary block from the ciphertext, convert it back to an integer (0–255), XOR with the ASCII value of the corresponding key character, and convert the result back to a character.
+### Ampliar el alfabeto permitido
 
-## More complex XOR Assignments (optional)
+Permite letras minúsculas y mayúsculas, espacios, números y signos de puntuación. Los caracteres que no son letras se someten a XOR con la clave de la misma manera.
 
-### Expand the allowed alphabet
+## Usar funciones
 
-Allow lowercase and uppercase letters, spaces, numbers, and punctuation marks. Non-letters are XORed with the key in the same way as letters.
+Crea dos funciones: `encrypt()` para cifrar mensajes y `decrypt()` para descifrar mensajes. Usa las funciones creadas en tu programa principal.
 
-## Use functions
+### Crear una Clase
 
-Create two functions: `encrypt()` for encrypting messages and `decrypt()` for decrypting messages. Use the created functions in your main program.
+Crea una clase `XorCipher` que:
 
-### Create a class
+- Almacene la clave,
+- Proporcione métodos `encrypt()` y `decrypt()`,
+- Opcionalmente incluya un método auxiliar privado para repetir la clave a lo largo de la longitud del mensaje.
 
-Create a `XorCipher` class that:
+Usa la clase creada en tu programa principal.
 
-- stores the key,
-- provides `encrypt()` and `decrypt()` methods,
-- optionally contains a private helper method for repeating the key over the length of the message.
+### Aceptar Argumentos de Línea de Comandos
 
-Use the created class in the main program.
+En lugar de esperar la entrada del usuario, crea una aplicación de consola que acepte los siguientes argumentos de línea de comandos:
 
-### Accept command-line arguments
+1. argumento `m` para especificar el mensaje,
+2. argumento `k` para especificar la clave, y
+3. argumento `s` para especificar la operación (`1` para cifrar, `2` para descifrar).
 
-Instead of waiting for user input, create a console application that accepts the following command-line arguments:
+### Cifrar y Descifrar Archivos
 
-1. argument `m` for the message,
-2. argument `k` for the key, and
-3. argument `s` for the operation (`1` for encryption, `2` for decryption).
+Utiliza el conocimiento adquirido hasta ahora para crear un programa que pueda:
 
-### Encrypt and decrypt files
-
-Use your knowledge so far to create a program that can:
-
-- read plaintext or binary ciphertext from a file,
-- encrypt or decrypt it with a given key, and
-- write the result to a new file.
+- Leer texto plano o binario cifrado desde un archivo,
+- Cifrarlo o descifrarlo con la clave dada, y
+- Escribir el resultado en un nuevo archivo.
