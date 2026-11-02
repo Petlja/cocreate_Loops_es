@@ -1,36 +1,28 @@
-# Conditions and loops
+# Condicions i bucles
 
-To successfully master the material about encryption, it is necessary to know the basic facts about working with conditions and loops. Conditions and loops are the basic mechanisms that allow computer programs to make decisions and repeat certain actions. Thanks to conditions, a program can react differently depending on the data it receives, while loops enable efficient repetition of the same steps multiple times. These concepts are crucial in encryption, as algorithms for data protection are based on a series of rules, checks, and repeating procedures that ensure information security.
+Per dominar amb èxit el material sobre xifratge, cal que coneguis els fets bàsics sobre el treball amb condicions i bucles. Les condicions i els bucles són els mecanismes principals que permeten als programes informàtics prendre decisions i repetir determinades accions. Gràcies a les condicions, un programa pot reaccionar de manera diferent segons les dades que rep, mentre que els bucles permeten repetir de manera eficient els mateixos passos diverses vegades. Aquests conceptes són de vital importància en xifratge, ja que els algorismes de protecció de dades es basen en una sèrie de regles, comprovacions i procediments repetitius que garanteixen la seguretat de la informació.
 
-Let's recall some basics! If this area is still unclear to you, go through the lesson on Petlja dedicated exactly to this topic.
 
-Link to Petlja's lesson on loops is [here](https://petlja.org/en/biblioteka/r/lekcije/python-za-svakog/01_karel_eng_02_for)
+## Condicions
 
-```{learnmorenote} For teachers
-
-Link to Petlja's lesson on loops: https://petlja.org/en/biblioteka/r/lekcije/python-za-svakog/01_karel_eng_02_for
-```
-
-## Conditions
-
-In most modern programming languages, conditional statements are used for decision-making and controlling program flow.
+A la majoria dels llenguatges de programació moderns, les instruccions condicionals es fan servir per prendre decisions i controlar el flux del programa. Les construccions més habituals són:
 
 * if
 * if-else
 * switch-case
 
-Although syntax differs between languages, the basic logic is the same.
+Tot i que la sintaxi varia entre llenguatges, la lògica bàsica és la mateixa.
 
-### The `if` statement
+### Instrucció `if`
 
-The `if` statement executes a block of code only if a given condition is true.
+L'instrucció `if` executa un bloc de codi només si la condició donada es compleix (és certa).
 
 ```text
 if condition then
     statement(s)
 ```
 
-For example, in C, C++, C#, and Java, if you want to check whether `x` is greater than `0`, the conditional statement can be written like this:
+Per exemple, en C, C++, C# i Java, si vols comprovar si `x` és més gran que `0`, la instrucció condicional es pot escriure així:
 
 ```csharp
 int x = 5;
@@ -39,9 +31,9 @@ if (x > 0) {
 }
 ```
 
-### The `if-else` statement
+### Instrucció `if-else`
 
-The `if-else` statement executes one block of code if the condition is true, and another block if it is false.
+La instrucció `if-else` executa un bloc de codi si la condició es compleix i un altre bloc si no.
 
 ```text
 if condition then
@@ -50,7 +42,7 @@ else
     statement(s)
 ```
 
-For example, in C, C++, C#, and Java, if you want to check whether `x` is greater than `0` or not, the conditional statement can be written like this:
+Per exemple, en C, C++, C# i Java, si vols comprovar si `x` és més gran que `0` o no, la instrucció condicional es pot escriure així:
 
 ```csharp
 int x = 5;
@@ -61,9 +53,9 @@ if (x > 0) {
 }
 ```
 
-### The `switch-case` statement
+### Instrucció `switch-case`
 
-The `switch-case` statement is useful when one same variable is compared with multiple possible values. This construct simplifies code where multiple if-else statements would otherwise be needed.
+L'instrucció `switch-case` és útil quan una mateixa variable es compara amb diverses possibles valors. Aquesta construcció pot ser més clara que diverses instruccions `if-else`.
 
 ```text
 switch expression do
@@ -76,7 +68,7 @@ switch expression do
         statement(s)
 ```
 
-For example, in C, C++, C#, and Java, if you want to determine the name of a day based on its ordinal number in the week, the conditional statement can be written like this:
+Per exemple, en C, C++, C# i Java, si vols determinar el nom del dia a partir del seu número de dia de la setmana, la instrucció condicional es pot escriure així:
 
 ```csharp
 int day = 3;
@@ -98,31 +90,31 @@ switch (day) {
 }
 ```
 
-### Nesting conditions
+### Anidament de condicions
 
-Conditional statements can be placed inside one another – this is called **nesting**. Nested conditions are often used when we need to check multiple dependent conditions.
+Les instruccions condicionals poden estar col·locades una dins de l'altra: això s'anomena **anidament**. Les condicions anidades són útils quan la decisió depèn del resultat d'una decisió anterior. Per exemple, potser primer comproves si l'usuari està connectat i, després, dins d'aquest bloc, comproves si té permís per executar una determinada acció.
 
-## Loops
+## Bucles
 
-In most modern programming languages, loops are usually implemented using one of the following constructs:
+A la majoria dels llenguatges de programació moderns, els bucles es duen a terme normalment mitjançant alguna d'aquestes construccions:
 
 * `for`,
-* `while` (or `while-do`),
-* `do-while` (or `repeat-until`),
-* `foreach` (or `for-each`).
+* `while` (o `while-do`),
+* `do-while` (o `repeat-until`),
+* `foreach` (o `for-each`).
 
-Although syntax differs between languages, the basic logic is the same.
+Tot i que la sintaxi varia entre llenguatges, la lògica bàsica és la mateixa.
 
-### The `for` loop
+### Bucle `for`
 
-The `for` loop is used when the number of iterations is finite and known in advance.
+La instrucció `for` es fa servir quan el nombre de repeticions és finit i conegut per endavant.
 
 ```text
 for variable ← start to end do
     statement(s)
 ```
 
-For example, in C, C++, C#, and Java, a `for` loop to iterate through numbers from 0 to 9 can be written like this:
+Per exemple, en C, C++, C# i Java, un bucle `for` per recórrer els nombres de 0 a 9 es pot escriure així:
 
 ```csharp
 for (int i = 0; i <= 9; i++) {
@@ -130,16 +122,16 @@ for (int i = 0; i <= 9; i++) {
 }
 ```
 
-### The `while` loop
+### Bucle `while`
 
-The `while` loop (or `while-do`) is used when the number of iterations is not known in advance. The condition is checked before each iteration.
+La instrucció `while` (o `while-do`) es fa servir quan el nombre de repeticions no es coneix per endavant. La condició es comprova abans de cada iteració, i per això aquest bucle s'anomena **bucle amb condició prèvia**.
 
 ```text
 while condition do
     statement(s)
 ```
 
-For example, in C, C++, C#, and Java, a `while` loop to iterate through numbers from 0 to 9 can be written like this:
+Per exemple, en C, C++, C# i Java, un bucle `while` per recórrer els nombres de 0 a 9 es pot escriure així:
 
 ```csharp
 int i = 0;
@@ -149,9 +141,9 @@ while (i <= 9) {
 }
 ```
 
-### The `do-while` loop
+### Bucle `do-while`
 
-The `do-while` loop (or `repeat-until`) also supports an unknown number of iterations, but the condition is checked after each iteration.
+La instrucció `do-while` (o `repeat-until`) també admet un nombre de repeticions desconegut, però la condició es comprova després de cada iteració. Aquest és un **bucle amb condició posterior** i sempre s'executa almenys una vegada.
 
 ```text
 repeat
@@ -159,7 +151,7 @@ repeat
 until condition
 ```
 
-For example, in C, C++, C#, and Java, a `do-while` loop to iterate through numbers from 0 to 9 can be written like this:
+Per exemple, en C, C++, C# i Java, un bucle `do-while` per recórrer els nombres de 0 a 9 es pot escriure així:
 
 ```csharp
 int i = 0;
@@ -169,16 +161,16 @@ do {
 } while (i <= 9);
 ```
 
-### The `foreach` loop
+### Bucle `foreach`
 
-The `foreach` loop (or `for-each`) is used to iterate through all elements in a collection or array. This loop simplifies working with collections.
+La instrucció `foreach` (o `for-each`) es fa servir per recórrer tots els elements d'una col·lecció o d'un array. Aquest bucle simplifica la iteració quan no et preocupa l'índex.
 
 ```text
 for-each element in collection do
     statement(s)
 ```
 
-For example, a `for-each` loop to iterate through an array `nums` can be written in C++ like this:
+Per exemple, un bucle `for-each` per recórrer un array `nums` es pot escriure en C++ així:
 
 ```cpp
 int nums[] = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
@@ -187,27 +179,27 @@ for (int i : nums) {
 }
 ```
 
-...or in C# like this...
+...o en C# així...
 
 ```csharp
 int[] nums = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
 foreach (int i in nums) {
-    // ...  
+    // ...
 }
 ```
 
-...or in Java like this:
+...o en Java així:
 
 ```java
 int[] nums = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
 for (int i : nums) {
-    // ...   
+    // ...
 }
 ```
 
-### Nesting loops
+### Anidament de bucles
 
-Loops can also be nested, meaning that one loop is placed inside another. This is common when working with multi-dimensional data, such as traversing rows and columns in a matrix or iterating over a grid in a game. Furthermore, loops and conditions can be freely combined — for example, a loop may contain an `if` statement to process only certain elements, or an `if` statement may contain a loop to perform repeated actions when a condition is true. This ability to mix and nest loops and conditions allows for the creation of complex algorithms while keeping the underlying logic structured.
+Els bucles també poden estar anidats, és a dir, un bucle pot estar dins d'un altre. Això passa sovint quan es treballa amb dades multidimensionals, com recórrer files i columnes d'una matriu o iterar sobre una graella en un joc. A més, els bucles i les condicions es poden combinar lliurement: per exemple, un bucle pot contenir una instrucció `if` per processar només alguns elements, o una instrucció `if` pot contenir un bucle per repetir accions quan es compleix la condició. Aquesta possibilitat de combinar i anidar bucles i condicions permet crear algorismes complexos mantenint la lògica clara.
 
 
-Different forms of loops will be needed for different forms of encryption you will learn about on the following pages!
+Diversos tipus de bucles seran necessaris per als diferents tipus de xifratge que aprendràs en les properes pàgines!
