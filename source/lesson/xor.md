@@ -100,10 +100,6 @@ la salida debe ser:
 nikolateslaa
 ```
 
-## Comenzar la tarea
-
-Realiza la tarea y escribe la solución en tu cuaderno o documento.
-
 ## Pistas para la solución
 
 Cada carácter se almacena en memoria como un valor ASCII de 8 bits (para letras minúsculas
