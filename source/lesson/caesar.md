@@ -1,51 +1,45 @@
-
 # Cifrado César
 
-Uno de los grandes generales que utilizó mensajes cifrados fue Julio César, alrededor del año 50 a. C. Cuando César enviaba mensajes a sus generales, los cifraba desplazando las letras del texto un número determinado de posiciones en el alfabeto. Los destinatarios podían descifrarlos porque conocían el valor del desplazamiento, mientras que todos los demás solo veían un texto sin sentido.
+Uno de los grandes comandantes militares que utilizó mensajes cifrados fue Julio César, alrededor del año 50 a. C. Usó un cifrado simple conocido como cifrado César para proteger las comunicaciones militares. Este cifrado también se conoce como cifrado por desplazamiento porque cada letra del texto sin cifrar se reemplaza por una letra situada a un número fijo de posiciones más arriba o más abajo en el alfabeto.
 
-Por ejemplo, si escribes `NIKOLATESLA` y desplazas cada letra tres posiciones hacia la derecha:
+Por ejemplo, si escribes `NIKOLATESLA` y desplazas cada letra tres posiciones hacia la izquierda:
+
+![Desplazamiento a la izquierda del cifrado César](./images/caesar1.png)
 
 ```text
 A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
 X Y Z A B C D E F G H I J K L M N O P Q R S T U V W
 ```
 
+La letra `N` se convierte en `K`, la `I` se convierte en `F`, y así sucesivamente. Por tanto, cada letra se reemplaza por otra letra que está a cierta distancia en el alfabeto.
 
-La letra `N` se convierte en `K`, `I` se convierte en `F`, y así sucesivamente. Por tanto, cada letra se sustituye por otra situada un número determinado de posiciones más adelante en el alfabeto. Cuando se llega al final del alfabeto, se continúa desde el principio. El resultado de desplazar tres letras hacia la derecha es el mensaje cifrado `KFHLIXQBPIX`. Por otro lado, si desplazas cada letra de la palabra obtenida tres posiciones hacia la izquierda:
+La **descriptografía** funciona de la misma manera, pero a la inversa. Para descifrar el texto cifrado, desplaza cada letra tres posiciones hacia la derecha:
 
 ```text
 A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
 D E F G H I J K L M N O P Q R S T U V W X Y Z A B C
 ```
 
-
-La letra `K` se convierte en `N`, `F` se convierte en `I`, y así sucesivamente. El resultado de este desplazamiento es el mensaje original descifrado `NIKOLATESLA`.
-
-![Caesar Cipher Left Shift](./images/caesar1.png)
+La letra `K` se convierte en `N`, la `F` se convierte en `I`, y así sucesivamente. El resultado de este desplazamiento es el mensaje descifrado original `NIKOLATESLA`.
 
 
-## Ejercicio de reflexión
+## Tarea para reflexionar
 
-Piensa en cómo crearías una aplicación de consola, en cualquier lenguaje de programación, que cifre y descifre mensajes utilizando el cifrado César. A continuación se ofrecen algunos consejos. Después de leerlos, intenta crear una aplicación de consola en el entorno de desarrollo que utilizáis en las clases de programación.
-
+Piensa en cómo crearías una aplicación de consola en cualquier lenguaje de programación que cifre y descifre mensajes mediante el cifrado César.
 
 ```{infonote}
-El primer estudiante (*conductor*) debe centrarse en la sintaxis mientras escribe el código para cifrar el mensaje. El segundo estudiante (*navegador*) debe revisar cada línea de código mientras se escribe, buscar errores, hacer preguntas y proponer mejoras. Después, los estudiantes cambian de rol y continúan escribiendo el código para descifrar el mensaje.
+El primer estudiante (*driver*) debe centrarse en la sintaxis mientras escribe el código para cifrar el mensaje. El segundo estudiante (*navigator*) debe observar el código, sugerir mejoras y hacer preguntas. Después de cifrar, cambiad los roles para descifrar.
 ```
 
-
-El alfabeto permitido para los mensajes (tanto para el texto claro como para el texto cifrado) puede contener únicamente letras minúsculas del alfabeto inglés:
+El alfabeto permitido para los mensajes, tanto para el texto sin cifrar como para el texto cifrado, solo puede contener letras minúsculas del alfabeto inglés:
 
 ```text
 Σ = { a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z }
 ```
 
+No se permiten espacios, letras mayúsculas, números ni otros caracteres.
 
-No se permiten espacios, letras mayúsculas, números ni otros signos.
-
-
-En la primera línea de entrada aparece el mensaje `m`, de como máximo cien caracteres; en la segunda línea, el número entero `n`, que representa el valor del desplazamiento ($1 \leq n < 26$); y en la tercera línea, el número entero `s`, que representa la dirección del cifrado. Si $s=1$, se debe cifrar `m`, y si $s=2`, se debe descifrar `m`.
-
+En la primera línea de entrada hay un mensaje `m` de como máximo cien caracteres; en la segunda línea hay un entero `n` que representa el valor del desplazamiento (1–25), y en la tercera línea hay un entero `s` que representa la dirección del cifrado. Si `s=1`, se debe cifrar `m`; si `s=2`, se debe descifrar.
 
 ### Ejemplo de prueba 1
 
@@ -57,13 +51,11 @@ nikolatesla
 1
 ```
 
-
 la salida debe ser:
 
 ```text
 kfhlixqbpix
 ```
-
 
 ### Ejemplo de prueba 2
 
@@ -75,16 +67,15 @@ kfhlixqbpix
 2
 ```
 
-
 la salida debe ser:
 
 ```text
 nikolatesla
 ```
 
-## Consejos para la solución
+## Sugerencias de solución
 
-Como el alfabeto inglés tiene 26 letras, la posición de cada letra puede representarse con un número del 0 al 25.
+Dado que el alfabeto inglés tiene 26 letras, la posición de cada letra se puede representar mediante un número del 0 al 25.
 
 * a → 0
 * b → 1
@@ -92,71 +83,64 @@ Como el alfabeto inglés tiene 26 letras, la posición de cada letra puede repre
 * ...
 * z → 25
 
-
 Para **cifrar** una letra, puedes utilizar la siguiente fórmula:
-
-```text
-new_letter_position = (current_letter_position + shift_value) mod 26
-```
-
-
-`original_position` representa el valor numérico de la letra en el alfabeto, `shift_value` representa el número de posiciones del desplazamiento (1–25), y `mod 26` garantiza que el resultado vuelva al principio del alfabeto si supera la letra `z`.
-
-
-Para **descifrar** una letra, puedes utilizar la siguiente fórmula:
 
 ```text
 new_letter_position = (current_letter_position - shift_value + 26) mod 26
 ```
 
+`current_letter_position` representa el valor numérico de la letra en el alfabeto, `shift_value` representa el número de posiciones de desplazamiento (1–25), `+ 26` garantiza que el valor no sea negativo y `mod 26` garantiza que el valor vuelva al principio del alfabeto.
 
-El procedimiento es similar al cifrado, pero se resta el valor del desplazamiento, y `+ 26` garantiza que el valor no sea negativo antes de aplicar `mod 26`.
+Para **descifrar** una letra, puedes utilizar la siguiente fórmula:
 
+```text
+new_letter_position = (current_letter_position + shift_value) mod 26
+```
 
-## Tareas más complejas con el cifrado César (opcional)
+De manera similar al cifrado, pero se suma el valor del desplazamiento, por lo que el valor no puede ser negativo y no es necesario `+ 26`.
 
-### Amplía el alfabeto permitido
+## Ejercicios más complejos sobre el cifrado César (opcionales)
 
-Crea una aplicación de consola, en cualquier lenguaje de programación, que cifre y descifre mensajes utilizando el cifrado César. El alfabeto permitido para los mensajes (tanto para el texto claro como para el texto cifrado) puede contener letras minúsculas y mayúsculas del alfabeto inglés, espacios, números y signos de puntuación.
+### Ampliar el alfabeto permitido
 
-La aplicación debe cifrar o descifrar únicamente las letras minúsculas y mayúsculas. Los espacios, números y signos de puntuación deben permanecer sin cambios durante el cifrado o el descifrado.
+Crea una aplicación de consola en cualquier lenguaje de programación que cifre y descifre mensajes mediante el cifrado César, pero con un alfabeto ampliado.
 
-En la primera línea de entrada aparece el mensaje `m`, de como máximo cien caracteres; en la segunda línea, el número entero `n`, que representa el valor del desplazamiento ($1 \leq n < 26$); y en la tercera línea, el número entero `s`, que representa la dirección del cifrado. Si $s=1$, se debe cifrar `m`, y si $s=2`, se debe descifrar `m`.
+La aplicación debe cifrar o descifrar solo las letras minúsculas y mayúsculas. Los espacios, los números y los signos de puntuación deben permanecer sin cambios.
 
+En la primera línea de entrada hay un mensaje `m` de como máximo cien caracteres; en la segunda línea hay un entero `n` (el valor del desplazamiento, de 1–25) y en la tercera línea hay un entero `s` (1 para cifrar, 2 para descifrar).
 
-## Utiliza funciones
+## Usa las funciones
 
-Crea dos funciones: una para cifrar mensajes y otra para descifrarlos. Utiliza las funciones creadas en el programa principal.
+Crea dos funciones: una para cifrar mensajes y otra para descifrarlos. Usa las funciones creadas en tu programa principal.
 
-¡Aquí podéis trabajar por parejas: una persona debe cifrar el mensaje y la otra debe descifrarlo!
+Aquí puedes trabajar en parejas: una persona debe cifrar el mensaje y la otra debe descifrarlo.
 
-
-## Crea una clase
+## Crear una clase
 
 Crea una clase `CaesarCipher` que contenga:
 
-- un constructor con un parámetro que acepte el valor del desplazamiento y garantice que está dentro del intervalo permitido,
-- una propiedad privada para almacenar el valor del desplazamiento, con métodos getter y setter,
-- un método público para cifrar mensajes,
-- un método público para descifrar mensajes y
-- opcionalmente, un método privado para procesar mensajes que utilicen ambos métodos.
+- un constructor con un parámetro que acepta un valor de desplazamiento y garantiza que esté dentro del intervalo permitido (0–25),
+- una propiedad privada para almacenar el valor de desplazamiento, con métodos getter y setter,
+- un método público para cifrar un mensaje,
+- un método público para descifrar un mensaje, y
+- opcionalmente, un método privado para procesar mensajes que utilizan ambos métodos.
 
-Utiliza la clase creada en el programa principal.
+Usa la clase creada en el programa principal.
 
+## Aceptar argumentos de la línea de comandos
 
-## Acepta argumentos de la línea de comandos
-
-En lugar de esperar la entrada del usuario, crea una aplicación de consola que acepte los siguientes argumentos de la línea de comandos:
+En lugar de esperar a que el usuario introduzca datos, crea una aplicación de consola que acepte los siguientes argumentos de la línea de comandos:
 
 1. el argumento `m` para el mensaje,
 2. el argumento `n` para el valor del desplazamiento (`0` a `25`), y
-3. el argumento `s` para la dirección del cifrado (`1` para cifrar, `2` para descifrar).
+3. el argumento `s` para la dirección de cifrado (`1` para cifrar, `2` para descifrar).
 
+## Cifrar y descifrar archivos
 
-## Cifra y descifra archivos
+Utiliza los conocimientos adquiridos hasta ahora para crear una aplicación de consola que cifre y descifre archivos de texto mediante el cifrado César.
 
-Utiliza los conocimientos adquiridos hasta ahora para crear una aplicación de consola que cifre y descifre archivos de texto. Tu aplicación debe aceptar los siguientes argumentos de la línea de comandos:
+La aplicación debe aceptar los siguientes argumentos de la línea de comandos:
 
 1. el argumento `m` para el nombre del archivo (o la ruta),
 2. el argumento `n` para el valor del desplazamiento (`0` a `25`), y
-3. el argumento `s` para la dirección del cifrado (`1` para cifrar, `2` para descifrar).
+3. el argumento `s` para la dirección de cifrado (`1` para cifrar, `2` para descifrar).

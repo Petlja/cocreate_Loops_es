@@ -1,9 +1,8 @@
-
 # Escítala
 
-La escítala (en inglés, skytale) es una de las herramientas de cifrado conocidas más antiguas. Procede de la antigua Grecia, alrededor del año 400 a. C. Era un dispositivo cilíndrico sencillo que los espartanos utilizaban para enviar mensajes secretos durante las campañas militares.
+La escítala (skytale) es una de las herramientas de cifrado más antiguas conocidas, utilizada en la antigua Grecia alrededor del año 400 a. C. Era un dispositivo cilíndrico sencillo que los espartanos empleaban para enviar mensajes secretos durante las campañas militares.
 
-Una tira de pergamino o cuero se enrollaba alrededor de un palo de madera (*escítala*) de un diámetro determinado. A continuación, el mensaje se escribía a lo largo del palo. Cuando se desenrollaba la tira, las letras parecían mezcladas y no tenían sentido. El destinatario debía tener un palo del **mismo diámetro** para poder enrollar la tira y leer el mensaje original.
+Una tira de pergamino o cuero se enrollaba alrededor de una vara de madera (*skytale*) de cierto diámetro. Después, el mensaje se escribía a lo largo de la tira enrollada. Para descifrarlo, el receptor enrollaba la tira alrededor de una vara del mismo diámetro y leía el mensaje a lo largo, de la misma forma en que se había escrito.
 
 Si quieres cifrar el mensaje:
 
@@ -11,8 +10,7 @@ Si quieres cifrar el mensaje:
 attackatdawn
 ```
 
-
-y eliges un palo que permita **4 letras por vuelta**, primero escribes el mensaje verticalmente en columnas, formando filas de longitud 4:
+y eliges una vara que permite **3 letras por vuelta**, la tira gira alrededor de ella 4 veces. Escribes el mensaje a lo largo de la vara, fila por fila, con 4 letras por fila (una en cada vuelta), formando una tabla:
 
 ```text
 a t t a
@@ -20,33 +18,27 @@ c k a t
 d a w n
 ```
 
-
-Después, el texto cifrado se obtiene leyendo por filas:
+El texto cifrado se obtiene leyendo columna por columna (este es el orden de las letras en la tira desenrollada):
 
 ```text
 acdtkatawatn
 ```
 
-
-Para descifrar el mensaje, el destinatario vuelve a enrollar la tira alrededor de un palo del mismo diámetro y lee verticalmente para reconstruir el mensaje original.
-
+Para descifrar el mensaje, el receptor enrolla la tira alrededor de una vara del mismo diámetro y vuelve a leer fila por fila para reconstruir el mensaje original.
 
 ## Primera tarea
 
-Crea una aplicación de consola, en cualquier lenguaje de programación, que cifre y descifre mensajes utilizando el cifrado Escítala. Utiliza el entorno de desarrollo que empleáis en las clases de programación.
+Crea una aplicación de consola en cualquier lenguaje de programación para cifrar y descifrar mensajes mediante el cifrado de escítala.
 
-El alfabeto permitido para los mensajes contiene únicamente letras minúsculas del alfabeto inglés:
+El alfabeto permitido para los mensajes contiene solo letras minúsculas del alfabeto inglés:
 
 ```text
 Σ = { a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z }
 ```
 
+¡No se permiten espacios, letras mayúsculas, números ni otros caracteres!
 
-¡No se permiten espacios, letras mayúsculas, números ni otros signos!
-
-
-En la primera línea de entrada aparece el mensaje `m`, de como máximo cien caracteres. En la segunda línea aparece el número entero `k` (el número de columnas, es decir, la circunferencia del palo). En la tercera línea aparece el número entero `s`, que representa la operación. Si $s=1$, se debe cifrar `m`. Si $s=2$, se debe descifrar `m`.
-
+En la primera línea de entrada hay un mensaje `m` de como máximo cien caracteres. En la segunda línea hay un entero `k` (el número de columnas de la tabla para el cifrado). En la tercera línea hay un entero `s` (1 para cifrar, 2 para descifrar).
 
 ### Ejemplo de prueba 1
 
@@ -58,13 +50,11 @@ attackatdawn
 1
 ```
 
-
 la salida debe ser:
 
 ```text
 acdtkatawatn
 ```
-
 
 ### Ejemplo de prueba 2
 
@@ -76,36 +66,36 @@ acdtkatawatn
 2
 ```
 
-
 la salida debe ser:
 
 ```text
 attackatdawn
 ```
 
-## Consejos para la solución
+## Sugerencias de solución
 
-Para **cifrar**, escribe el texto claro verticalmente en una tabla con `k` columnas. Lee la tabla por filas para obtener el texto cifrado. Para **descifrar**, escribe el texto cifrado por filas en una tabla con `k` columnas y, a continuación, lee la tabla verticalmente para reconstruir el texto claro.
+Para el **cifrado**, escribe el texto sin cifrar fila por fila en una tabla con `k` columnas. Lee la tabla columna por columna para obtener el texto cifrado.
 
+Para el **descifrado**, escribe el texto cifrado columna por columna en una tabla con `k` columnas (cada columna contiene la longitud del mensaje dividida entre `k` letras) y luego lee la tabla fila por fila para reconstruir el texto sin cifrar.
 
-## Tareas más complejas con el cifrado Escítala (opcional)
+## Ejercicios más complejos con la escítala (opcionales)
 
-### Amplía el alfabeto permitido
+### Ampliar el alfabeto permitido
 
 Incluye letras mayúsculas, espacios, números y signos de puntuación.
 
-### Utiliza funciones
+### Usar funciones
 
-Crea las funciones `encrypt()` y `decrypt()` para que el código sea modular.
+Crea las funciones `encrypt()` y `decrypt()` para modularizar el código.
 
-### Crea una clase
+### Crear una clase
 
 Implementa una clase `SkytaleCipher` que almacene `k` y proporcione métodos para cifrar y descifrar.
 
-### Cifra y descifra archivos
+### Cifrar y descifrar archivos
 
-Modifica el programa para que lea texto claro o cifrado de un archivo y escriba el resultado en otro archivo.
+Modifica el programa para que lea el texto sin cifrar o cifrado de un archivo y escriba el resultado en otro archivo.
 
-### Procesa filas incompletas
+### Gestionar filas incompletas
 
-Modifica el programa para que, si la última fila es más corta que `k`, siga cifrando y descifrando correctamente mediante el procesamiento de los caracteres que faltan o la adición de relleno.
+Modifica el programa para que, si la última fila tiene menos de `k` caracteres, siga cifrando y descifrando correctamente y gestione las filas incompletas de forma adecuada.
