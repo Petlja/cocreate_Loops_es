@@ -142,9 +142,9 @@ Unicode es un conjunto de caracteres extendido que incluye todos los códigos AS
 | U+045F | џ      | 1119 |
 | U+0448 | ш      | 1096 |
 
-Algo que vale la pena notar es que aunque algunas letras latinas y cirílicas se ven iguales, sus valores Unicode son diferentes. Por ejemplo, la letra A mayúscula latina se codifica como U+0041, mientras que la letra A mayúscula cirílica se codifica como U+0410.
+Nota: esta tabla está adaptada de la versión serbia del curso y muestra el alfabeto cirílico serbio con el código Unicode y el valor decimal de cada letra. En la versión en español se trabaja con el alfabeto latino, por lo que las letras y sus códigos son diferentes (por ejemplo, la «A» es U+0041 = 65 y la «a» es U+0061 = 97). Lo importante es comprender que cada carácter se representa mediante un número, sea cual sea el alfabeto.
 
-Estos son solo ejemplos del idioma serbio. Si te interesa, siempre puedes aprender más sobre los caracteres específicos utilizados en otros idiomas.
+Algo que vale la pena notar es que aunque algunas letras latinas y cirílicas se ven iguales, sus valores Unicode son diferentes. Por ejemplo, la letra A mayúscula latina se codifica como U+0041, mientras que la letra A mayúscula cirílica se codifica como U+0410.
 
 ## Cadenas
 
