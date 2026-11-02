@@ -102,7 +102,7 @@ nikolateslaa
 
 ## Comenzar la tarea
 
-[Implementa el cifrado aquí](https://arena.petlja.org/sr-Latn-RS/competition/123-co-create#tab_142947)
+Realiza la tarea y escribe la solución en tu cuaderno o documento.
 
 ## Pistas para la solución
 
