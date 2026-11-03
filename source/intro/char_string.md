@@ -144,6 +144,8 @@ Unicode es un conjunto de caracteres extendido que incluye todos los códigos AS
 
 Algo que vale la pena notar es que aunque algunas letras latinas y cirílicas se ven iguales, sus valores Unicode son diferentes. Por ejemplo, la letra A mayúscula latina se codifica como U+0041, mientras que la letra A mayúscula cirílica se codifica como U+0410.
 
+Estos son solo ejemplos del idioma serbio. Si te interesa, siempre puedes aprender más sobre los caracteres específicos utilizados en otros idiomas.
+
 ## Cadenas
 
 Una cadena es una secuencia de caracteres ordenados en un orden particular. Cada carácter puede ser una letra, un dígito, un signo de puntuación, un espacio, etc. Las cadenas son fundamentales en la informática porque representan texto, nombres de archivos, entrada del usuario y mucho más.
