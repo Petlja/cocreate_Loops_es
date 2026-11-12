@@ -1,6 +1,6 @@
-# Caesar Cipher
+# Cifrado César
 
-One of the great military commanders who used encrypted messages was Julius Caesar, around 50 BC. He used a simple cipher known as the Caesar cipher to protect military communications. This cipher is also known as a shift cipher because each letter in the plaintext is replaced by a letter some fixed number of positions down or up the alphabet.
+Uno de los grandes comandantes militares que utilizó mensajes cifrados fue Julio César, alrededor del año 50 a. C. Usó un cifrado simple conocido como cifrado César para proteger las comunicaciones militares. Este cifrado también se conoce como cifrado por desplazamiento porque cada letra del texto sin cifrar se reemplaza por una letra situada a un número fijo de posiciones más arriba o más abajo en el alfabeto.
 
 For example, if you write `NIKOLATESLA` and shift each letter three places to the left:
 
@@ -10,7 +10,7 @@ X Y Z A B C D E F G H I J K L M N O P Q R S T U V W
 ```
 ![Caesar Cipher Left Shift](./images/caesar1.png)
 
-Letter `N` becomes `K`, `I` becomes `F`, and so on. So each letter is replaced by another letter which is a certain distance away in the alphabet.
+La letra `N` se convierte en `K`, la `I` se convierte en `F`, y así sucesivamente. Por tanto, cada letra se reemplaza por otra letra que está a cierta distancia en el alfabeto.
 
 **Decryption** works the same way, but in reverse. To decrypt the ciphertext, shift each letter back three places to the right:
 
@@ -19,30 +19,30 @@ A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
 D E F G H I J K L M N O P Q R S T U V W X Y Z A B C
 ```
 
-Letter `K` becomes `N`, `F` becomes `I`, and so on. The result of this shift is the original decrypted message `NIKOLATESLA`.
+La letra `K` se convierte en `N`, la `F` se convierte en `I`, y así sucesivamente. El resultado de este desplazamiento es el mensaje descifrado original `NIKOLATESLA`.
 
 
-## Assignment to think about
+## Tarea para reflexionar
 
-Think about how you would create a console application in any programming language that will encrypt and decrypt messages using a Caesar cipher.
+Piensa en cómo crearías una aplicación de consola en cualquier lenguaje de programación que cifre y descifre mensajes mediante el cifrado César.
 
 ```{infonote}
-The first student (*driver*) should focus on syntax while typing the code to encrypt the message. The second student (*navigator*) should watch the code, suggest improvements, and ask questions. After encrypting, switch roles to decrypt.
+El primer estudiante (*driver*) debe centrarse en la sintaxis mientras escribe el código para cifrar el mensaje. El segundo estudiante (*navigator*) debe observar el código, sugerir mejoras y hacer preguntas. Después de cifrar, cambiad los roles para descifrar.
 ```
 
-The allowed alphabet for messages (both for plaintext and ciphertext) can contain only lowercase letters of the English alphabet:
+El alfabeto permitido para los mensajes, tanto para el texto sin cifrar como para el texto cifrado, solo puede contener letras minúsculas del alfabeto inglés:
 
 ```text
 Σ = { a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z }
 ```
 
-Spaces, uppercase letters, numbers, and other characters are not allowed.
+No se permiten espacios, letras mayúsculas, números ni otros caracteres.
 
-In the first line of input there is a message `m` of at most one hundred characters, in the second line an integer `n` which represents the shift value (1–25), and in the third line an integer `s`, which represents the encryption direction. If `s=1` then `m` should be encrypted, and if `s=2`, then `m` should be decrypted.
+En la primera línea de entrada hay un mensaje `m` de como máximo cien caracteres; en la segunda línea hay un entero `n` que representa el valor del desplazamiento (1–25), y en la tercera línea hay un entero `s` que representa la dirección del cifrado. Si `s=1`, se debe cifrar `m`; si `s=2`, se debe descifrar.
 
-### Test Example 1
+### Ejemplo de prueba 1
 
-If the input is:
+Si la entrada es:
 
 ```text
 nikolatesla
@@ -50,15 +50,15 @@ nikolatesla
 1
 ```
 
-the output should be:
+la salida debe ser:
 
 ```text
 kfhlixqbpix
 ```
 
-### Test Example 2
+### Ejemplo de prueba 2
 
-If the input is:
+Si la entrada es:
 
 ```text
 kfhlixqbpix
@@ -66,15 +66,15 @@ kfhlixqbpix
 2
 ```
 
-the output should be:
+la salida debe ser:
 
 ```text
 nikolatesla
 ```
 
-## Solution hints
+## Sugerencias de solución
 
-Since the English alphabet has 26 letters, the position of each letter can be represented by a number from 0 to 25.
+Dado que el alfabeto inglés tiene 26 letras, la posición de cada letra se puede representar mediante un número del 0 al 25.
 
 * a → 0
 * b → 1
@@ -82,7 +82,7 @@ Since the English alphabet has 26 letters, the position of each letter can be re
 * ...
 * z → 25
 
-To **encrypt** a letter, you can use the following formula:
+Para **cifrar** una letra, puedes utilizar la siguiente fórmula:
 
 ```text
 new_letter_position = (current_letter_position - shift_value + 26) mod 26
@@ -90,7 +90,7 @@ new_letter_position = (current_letter_position - shift_value + 26) mod 26
 
 `current_letter_position` represents the numeric value of the letter in the alphabet, `shift_value` represents the number of positions to shift (1–25), `+ 26` ensures the value does not become negative, and `mod 26` ensures the value wraps around the alphabet.
 
-To **decrypt** a letter, you can use the following formula:
+Para **descifrar** una letra, puedes utilizar la siguiente fórmula:
 
 ```text
 new_letter_position = (current_letter_position + shift_value) mod 26
@@ -98,48 +98,48 @@ new_letter_position = (current_letter_position + shift_value) mod 26
 
 Similarly to encryption, but the shift value is added, so the value cannot become negative and `+ 26` is not needed.
 
-## More complex Caesar Cipher Assignments (optional)
+## Ejercicios más complejos sobre el cifrado César (opcionales)
 
-### Expand the allowed alphabet
+### Ampliar el alfabeto permitido
 
-Create a console application in any programming language that will encrypt and decrypt messages using the Caesar cipher, but with an expanded alphabet.
+Crea una aplicación de consola en cualquier lenguaje de programación que cifre y descifre mensajes mediante el cifrado César, pero con un alfabeto ampliado.
 
-The application should encrypt or decrypt only lowercase and uppercase letters. Spaces, numbers, and punctuation marks should remain unchanged.
+La aplicación debe cifrar o descifrar solo las letras minúsculas y mayúsculas. Los espacios, los números y los signos de puntuación deben permanecer sin cambios.
 
-In the first line of input there is a message `m` of at most one hundred characters, in the second line an integer `n` (the shift value from 1–25), and in the third line an integer `s` (1 for encryption, 2 for decryption).
+En la primera línea de entrada hay un mensaje `m` de como máximo cien caracteres; en la segunda línea hay un entero `n` (el valor del desplazamiento, de 1–25) y en la tercera línea hay un entero `s` (1 para cifrar, 2 para descifrar).
 
-## Use the functions 
+## Usa las funciones
 
-Create two functions: one for encrypting messages and one for decrypting messages. Use the created functions in your main program.
+Crea dos funciones: una para cifrar mensajes y otra para descifrarlos. Usa las funciones creadas en tu programa principal.
 
-Here you can work in pairs - one person should encrypt the message, and the other should decrypt it!
+Aquí puedes trabajar en parejas: una persona debe cifrar el mensaje y la otra debe descifrarlo.
 
-## Create a Class
+## Crear una clase
 
-Create a `CaesarCipher` class that contains:
+Crea una clase `CaesarCipher` que contenga:
 
-- a constructor with a parameter that accepts a shift value and ensures that the value is in the allowed range (0–25),
-- a private property for storing the shift value, with getter and setter methods,
-- a public method for encrypting a message,
-- a public method for decrypting a message, and
-- optionally, a private method for processing messages that is used by both methods.
+- un constructor con un parámetro que acepta un valor de desplazamiento y garantiza que esté dentro del intervalo permitido (0–25),
+- una propiedad privada para almacenar el valor de desplazamiento, con métodos getter y setter,
+- un método público para cifrar un mensaje,
+- un método público para descifrar un mensaje, y
+- opcionalmente, un método privado para procesar mensajes que utilizan ambos métodos.
 
-Use the created class in the main program.
+Usa la clase creada en el programa principal.
 
-## Accept command-line arguments
+## Aceptar argumentos de la línea de comandos
 
-Instead of waiting for user input, create a console application that accepts the following command-line arguments:
+En lugar de esperar a que el usuario introduzca datos, crea una aplicación de consola que acepte los siguientes argumentos de la línea de comandos:
 
-1. argument `m` for the message,
-2. argument `n` for the shift value (`0` to `25`), and
-3. argument `s` for the encryption direction (`1` for encryption, `2` for decryption).
+1. el argumento `m` para el mensaje,
+2. el argumento `n` para el valor del desplazamiento (`0` a `25`), y
+3. el argumento `s` para la dirección de cifrado (`1` para cifrar, `2` para descifrar).
 
-## Encrypt and decrypt files
+## Cifrar y descifrar archivos
 
-Use your knowledge so far to create a console application for encrypting and decrypting text files using the Caesar cipher.
+Utiliza los conocimientos adquiridos hasta ahora para crear una aplicación de consola que cifre y descifre archivos de texto mediante el cifrado César.
 
-The application should accept the following command-line arguments:
+La aplicación debe aceptar los siguientes argumentos de la línea de comandos:
 
-1. argument `m` for the file name (or path),
-2. argument `n` for the shift value (`0` to `25`), and
-3. argument `s` for the encryption direction (`1` for encryption, `2` for decryption).
+1. el argumento `m` para el nombre del archivo (o la ruta),
+2. el argumento `n` para el valor del desplazamiento (`0` a `25`), y
+3. el argumento `s` para la dirección de cifrado (`1` para cifrar, `2` para descifrar).
