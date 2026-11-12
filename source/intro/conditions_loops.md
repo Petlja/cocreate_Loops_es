@@ -201,5 +201,6 @@ for (int i : nums) {
 
 Els bucles també poden estar anidats, és a dir, un bucle pot estar dins d'un altre. Això passa sovint quan es treballa amb dades multidimensionals, com recórrer files i columnes d'una matriu o iterar sobre una graella en un joc. A més, els bucles i les condicions es poden combinar lliurement: per exemple, un bucle pot contenir una instrucció `if` per processar només alguns elements, o una instrucció `if` pot contenir un bucle per repetir accions quan es compleix la condició. Aquesta possibilitat de combinar i anidar bucles i condicions permet crear algorismes complexos mantenint la lògica clara.
 
+Los bucles también pueden estar anidados, lo que significa que un bucle está dentro de otro. Esto es común cuando se trabaja con matrices multidimensionales o cuando se necesita realizar comparaciones entre elementos.
 
 Diversos tipus de bucles seran necessaris per als diferents tipus de xifratge que aprendràs en les properes pàgines!
