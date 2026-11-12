@@ -1,51 +1,55 @@
-# Collaboration on Task-Solving - Pair Programming in the Classroom
+# Colaboración en la solución de tareas - Programación en pareja en el aula
 
-In IT companies today, Agile (agile) methodology is one of the most popular and widely used software development methodologies — especially where the teams need to deliver working software quickly, collaboratively, and adaptively. **Pair programming** (pair programming) is a core practice in Extreme Programming (XP), which is one of the Agile methodologies.
+En las empresas de TI actuales, la metodología ágil (Agile en inglés) es una de las más populares y extendidas.
 
-It is a collaborative software development technique where two developers work together at one computer. One developer, called the **driver** (driver), writes the code and focuses on syntax, while the other developer, called the **navigator** (navigator), reviews each line of code as it is typed, looks out for mistakes, asks questions, and suggests improvements. The two developers switch roles frequently.
+**La programación en pareja** es una de las prácticas ágiles más interesantes.
 
-It is very easy to transfer this practice from IT companies to high school computer classrooms. In the classroom, two students share one computer to solve a programming task together. One student types the code, while the other checks the code, gives suggestions, and thinks about the next steps. After each subtask, they switch roles. Pair programming helps students learn by working together, practicing teamwork, sharing ideas, and seeing different ways to solve the same problems.
+Es una técnica de desarrollo de software colaborativo en la que dos programadores trabajan juntos en una sola computadora. Un programador (el "controlador") escribe el código, mientras que el otro (el "navegador") revisa cada línea a medida que se escribe, busca errores, hace preguntas y sugiere mejoras. Los roles se alternan regularmente para que ambos programadores practiquen ambas funciones.
+
+Esta práctica es muy fácil de transferir desde las empresas de TI a las aulas de informática. En el aula, dos estudiantes dividen los roles:
+
+- El **"controlador"** escribe el código,
+- El **"navegante"** revisa cada línea, busca errores y sugiere mejoras.
 
 ```{infonote} 
-To successfully master this lesson you will need to work in pairs!
+Para dominar con éxito esta lección, será necesario que trabajes en pareja.
 ```
 
-## Learning Objectives and Time
+## Resultados y tiempo de realización
 
-**Required time:** 3 school periods (135 minutes)
+**Tiempo necesario:** 3 horas de clase (135 minutos)
 
-### Learning Objectives
+### Resultados
 
-- To understand the structure and purpose of loops, and their use in manipulation and transformation of the text.
-- To understand the principles behind simple cryptographic algorithms and to implement these algorithms in a chosen programming language using loops.
-- To understand how computers protect privacy and prevent information abuse, as well as how text can be transformed into ciphertext and back.
+- Comprender la estructura y el propósito de los bucles, así como su uso en la manipulación y transformación de texto.
+- Comprender los principios de los algoritmos criptográficos simples e implementarlos en el lenguaje de programación elegido.
+- Comprender cómo los ordenadores protegen la privacidad y previenen el abuso de información, así como cómo se puede ocultar el texto mediante algoritmos de cifrado.
 
-## Expected Outcomes
+## Resultados esperados
 
-After completing the lesson, students will be able to:
+Al completar la lección, los estudiantes serán capaces de:
 
-- Correctly write code with loops that implements the Caesar cipher with encryption and decryption functions.
-- Write and explain the implementation of the XOR cipher using loops.
-- Construct the Skytale cipher using loops.
-- Recognize which type of loop is suitable for different text processing tasks.
-- Effectively work in pairs applying pair programming, effectively communicate, and present results in a clear and confident manner.
+- Escribir correctamente el código con bucles que implemente un cifrador de César con una función de cifrado y descifrado.
+- Escribir y explicar la implementación del cifrado XOR usando bucles.
+- Construir un cifrado de Escítala usando bucles.
+- Reconocer qué tipo de bucle es más adecuado para diferentes tareas de procesamiento de texto.
+- Trabajar eficazmente en pareja aplicando la programación colaborativa, comunicarse con éxito y presentar resultados de manera clara y profesional.
 
+```{learnmorenote} Para maestros
 
-```{learnmorenote} For teachers
+## Ventajas del trabajo en pareja para los estudiantes
 
-## Benefits of Pair Work for Students
+- **Aprendizaje de compañeros:** Los estudiantes aprenden unos de otros. Los principiantes se benefician de trabajar con compañeros más experimentados, mientras que los estudiantes más avanzados refuerzan su comprensión enseñando a otros.
+- **Soluciones de mejor calidad:** Un segundo par de ojos ayuda a detectar errores más temprano. La retroalimentación inmediata profundiza la comprensión.
+- **Mayor compromiso:** El trabajo en pareja mantiene a ambos estudiantes activos y enfocados. La comunicación de ideas profundiza el aprendizaje.
 
-- **Peer Learning:** Students learn from each other. Beginners benefit from working with more experienced classmates, and everyone strengthens their understanding through discussion.
-- **Higher Quality Solutions:** A second pair of eyes helps spot errors early. Immediate feedback prevents bad practices from taking root.
-- **Greater Engagement:** Pair work keeps both students active and focused. Communicating ideas deepens learning more than solitary coding.
+## Desafíos en el aula
 
-## Challenges in the Classroom
+¡Los maestros deben estar atento a los siguientes desafíos potenciales al implementar la programación en pareja!
 
-Teachers should pay attention to the following possible challenges when applying pair programming!
-
-- **Personality Clashes:** Differences in communication style or skill level can lead to frustration. Students must learn to work respectfully, even when they disagree.
-- **Uneven Participation:** One student may try to take over everything. The teacher must monitor regular role switching to ensure balanced involvement.
-- **Mental Fatigue:** Long sessions can be mentally exhausting. Well-defined tasks help maintain focus and energy.
+- **Diferencias de personalidad:** Las diferencias en el estilo de comunicación o el nivel de conocimiento pueden conducir a la frustración. Los estudiantes deben ser educados sobre la importancia de la comunicación clara.
+- **Participación desigual:** Un estudiante puede tratar de asumir el control. Los maestros deben monitorear los cambios regulares de roles durante la sesión de trabajo.
+- **Fatiga:** Las sesiones largas pueden ser mentalmente agotadoras. Las tareas bien definidas ayudan a mantener el enfoque y la energía.
 ```
 
-Best practice in pair programming recommends changing roles after each subtask, so both students remain engaged and learn complementary skills. A typical approach is: spend 15–20 minutes per role, then swap.
+La mejor práctica de la programación en pareja recomienda cambiar de rol después de cada subtarea para que ambos estudiantes permanezcan comprometidos y en condiciones de igualdad.
