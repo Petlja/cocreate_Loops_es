@@ -1,5 +1,5 @@
 
-project = 'Introducción a la Criptografía con Bucles'
+project = 'Introduction to Cryptography with Loops'
 copyright = '2025, Fondacija Petlja'
 author = 'Fondacija Petlja'
 

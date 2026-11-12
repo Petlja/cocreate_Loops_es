@@ -100,7 +100,11 @@ la salida debe ser:
 nikolateslaa
 ```
 
-## Pistas para la solución
+## Do the assignment
+
+Do the task. Write your solution in your notebook or document.
+
+## Solution hints
 
 Cada carácter se almacena en memoria como un valor ASCII de 8 bits (para letras minúsculas
 a–z, los códigos van del 97 al 122). Para cifrar un carácter, toma su

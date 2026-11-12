@@ -2,18 +2,17 @@
 
 Uno de los grandes comandantes militares que utilizó mensajes cifrados fue Julio César, alrededor del año 50 a. C. Usó un cifrado simple conocido como cifrado César para proteger las comunicaciones militares. Este cifrado también se conoce como cifrado por desplazamiento porque cada letra del texto sin cifrar se reemplaza por una letra situada a un número fijo de posiciones más arriba o más abajo en el alfabeto.
 
-Por ejemplo, si escribes `NIKOLATESLA` y desplazas cada letra tres posiciones hacia la izquierda:
-
-![Desplazamiento a la izquierda del cifrado César](./images/caesar1.png)
+For example, if you write `NIKOLATESLA` and shift each letter three places to the left:
 
 ```text
 A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
 X Y Z A B C D E F G H I J K L M N O P Q R S T U V W
 ```
+![Caesar Cipher Left Shift](./images/caesar1.png)
 
 La letra `N` se convierte en `K`, la `I` se convierte en `F`, y así sucesivamente. Por tanto, cada letra se reemplaza por otra letra que está a cierta distancia en el alfabeto.
 
-La **descriptografía** funciona de la misma manera, pero a la inversa. Para descifrar el texto cifrado, desplaza cada letra tres posiciones hacia la derecha:
+**Decryption** works the same way, but in reverse. To decrypt the ciphertext, shift each letter back three places to the right:
 
 ```text
 A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
@@ -89,7 +88,7 @@ Para **cifrar** una letra, puedes utilizar la siguiente fórmula:
 new_letter_position = (current_letter_position - shift_value + 26) mod 26
 ```
 
-`current_letter_position` representa el valor numérico de la letra en el alfabeto, `shift_value` representa el número de posiciones de desplazamiento (1–25), `+ 26` garantiza que el valor no sea negativo y `mod 26` garantiza que el valor vuelva al principio del alfabeto.
+`current_letter_position` represents the numeric value of the letter in the alphabet, `shift_value` represents the number of positions to shift (1–25), `+ 26` ensures the value does not become negative, and `mod 26` ensures the value wraps around the alphabet.
 
 Para **descifrar** una letra, puedes utilizar la siguiente fórmula:
 
@@ -97,7 +96,7 @@ Para **descifrar** una letra, puedes utilizar la siguiente fórmula:
 new_letter_position = (current_letter_position + shift_value) mod 26
 ```
 
-De manera similar al cifrado, pero se suma el valor del desplazamiento, por lo que el valor no puede ser negativo y no es necesario `+ 26`.
+Similarly to encryption, but the shift value is added, so the value cannot become negative and `+ 26` is not needed.
 
 ## Ejercicios más complejos sobre el cifrado César (opcionales)
 

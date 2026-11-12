@@ -2,7 +2,7 @@
 
 La escítala (skytale) es una de las herramientas de cifrado más antiguas conocidas, utilizada en la antigua Grecia alrededor del año 400 a. C. Era un dispositivo cilíndrico sencillo que los espartanos empleaban para enviar mensajes secretos durante las campañas militares.
 
-Una tira de pergamino o cuero se enrollaba alrededor de una vara de madera (*skytale*) de cierto diámetro. Después, el mensaje se escribía a lo largo de la tira enrollada. Para descifrarlo, el receptor enrollaba la tira alrededor de una vara del mismo diámetro y leía el mensaje a lo largo, de la misma forma en que se había escrito.
+A strip of parchment or leather was wrapped around a wooden rod (*skytale*) of a certain diameter. The message was then written lengthwise across the wrapped strip. To decrypt, the receiver wrapped the strip around a rod of the same diameter and read the message lengthwise, the same way it was written.
 
 Si quieres cifrar el mensaje:
 
@@ -10,7 +10,7 @@ Si quieres cifrar el mensaje:
 attackatdawn
 ```
 
-y eliges una vara que permite **3 letras por vuelta**, la tira gira alrededor de ella 4 veces. Escribes el mensaje a lo largo de la vara, fila por fila, con 4 letras por fila (una en cada vuelta), formando una tabla:
+and you choose a rod that allows **3 letters per wrap**, the strip goes around it 4 times. You write the message along the rod, row by row, 4 letters per row (one on each wrap), forming a table:
 
 ```text
 a t t a
@@ -18,13 +18,13 @@ c k a t
 d a w n
 ```
 
-El texto cifrado se obtiene leyendo columna por columna (este es el orden de las letras en la tira desenrollada):
+The encrypted text is then obtained by reading column by column (this is the order of the letters on the unwound strip):
 
 ```text
 acdtkatawatn
 ```
 
-Para descifrar el mensaje, el receptor enrolla la tira alrededor de una vara del mismo diámetro y vuelve a leer fila por fila para reconstruir el mensaje original.
+To decrypt the message, the receiver wraps the strip around a rod of the same diameter and reads row by row again to reconstruct the original message.
 
 ## Primera tarea
 
@@ -74,9 +74,9 @@ attackatdawn
 
 ## Sugerencias de solución
 
-Para el **cifrado**, escribe el texto sin cifrar fila por fila en una tabla con `k` columnas. Lee la tabla columna por columna para obtener el texto cifrado.
+For **encryption**, write the plaintext row by row in a table with `k` columns. Read the table column by column to get the ciphertext.
 
-Para el **descifrado**, escribe el texto cifrado columna por columna en una tabla con `k` columnas (cada columna contiene la longitud del mensaje dividida entre `k` letras) y luego lee la tabla fila por fila para reconstruir el texto sin cifrar.
+For **decryption**, write the ciphertext column by column into a table with `k` columns (each column holds the message length divided by `k` letters), then read the table row by row to reconstruct the plaintext.
 
 ## Ejercicios más complejos con la escítala (opcionales)
 

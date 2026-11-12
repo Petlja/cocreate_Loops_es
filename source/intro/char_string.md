@@ -1,12 +1,12 @@
-# Caràcters i cadenes
+# Caracteres y cadenas
 
-Entendre com es representen els caràcters i les cadenes de text t'ajudarà a processar text correctament a la següent lecció i t'assegurarà que tractis les dades de manera adequada.
+Entender cómo se representan los caracteres y las cadenas de texto te ayudará a procesar texto correctamente en la siguiente lección y te asegurará que trates los datos de manera adecuada.
 
-El tipus de dades per a caràcters, conegut com char, s'utilitza per representar caràcters individuals. Com que els ordinadors només poden emmagatzemar valors binaris, els caràcters han de codificar-se com a nombres. En els sistemes informàtics moderns s'utilitzen esquemes de codificació ASCII o Unicode. Els llenguatges de programació més antics (p. ex., C) generalment utilitzen ASCII, mentre que els llenguatges moderns (p. ex., C#) suporten Unicode.
+El tipo de datos para caracteres, conocido como char, se utiliza para representar caracteres individuales. Como los ordenadores solo pueden almacenar valores binarios, los caracteres deben codificarse como números. En los sistemas informáticos modernos se utilizan esquemas de codificación ASCII o Unicode. Los lenguajes de programación más antiguos (p. ej., C) generalmente utilizan ASCII, mientras que los lenguajes modernos (p. ej., C#) admiten Unicode.
 
 ## ASCII
 
-ASCII *(American Standard Code for Information Interchange)* és un codi binari de 7 bits que es representa en memòria amb 8 bits (un byte). Defineix 128 caràcters, que inclouen lletres, dígits, signes de puntuació i caràcters de control:
+ASCII *(American Standard Code for Information Interchange)* es un código binario de 7 bits que se representa en memoria con 8 bits (un byte). Define 128 caracteres, que incluyen letras, dígitos, signos de puntuación y caracteres de control:
 
 ```text
 DEC OCT HEX CH    DEC OCT HEX CH    DEC OCT HEX CH    DEC OCT HEX CH
@@ -47,9 +47,9 @@ DEC OCT HEX CH    DEC OCT HEX CH    DEC OCT HEX CH    DEC OCT HEX CH
 
 ## Unicode
 
-Unicode és un conjunt de caràcters expandit que inclou tots els codis ASCII a la seva primera part. A Unicode, els primers 128 valors de codi (U+0000 a U+007F) són completament idèntics als codis ASCII. A més d'això, Unicode defineix més de 150.000 caràcters de sistemes d'escriptura de tot el món. Per exemple, els caràcters llatins específics de l'alfabet serbi es defineixen de la següent manera:
+Unicode es un conjunto de caracteres ampliado que incluye todos los códigos ASCII en su primera parte. En Unicode, los primeros 128 valores de código (U+0000 a U+007F) son completamente idénticos a los códigos ASCII. Además de esto, Unicode define más de 150.000 caracteres de sistemas de escritura de todo el mundo. Por ejemplo, los caracteres latinos específicos del alfabeto serbio se definen de la siguiente manera:
 
-| Codi   | Símbol | DEC     |
+| Código | Símbolo | DEC      |
 |--------|--------|----------|
 | U+0106 | Ć      | 262     |
 | U+0107 | ć      | 263     |
@@ -62,9 +62,9 @@ Unicode és un conjunt de caràcters expandit que inclou tots els codis ASCII a 
 | U+017D | Ž      | 381     |
 | U+017E | ž      | 382     |
 
-...Les lletres llatines escrites amb dos caràcters es defineixen així:
+...Las letras latinas escritas con dos caracteres se definen así:
 
-| Codi   | Símbol | DEC     |
+| Código | Símbolo | DEC      |
 |--------|--------|----------|
 | U+01C4 | Ǆ      | 452     |
 | U+01C5 | ǅ      | 453     |
@@ -76,9 +76,9 @@ Unicode és un conjunt de caràcters expandit que inclou tots els codis ASCII a 
 | U+01CB | ǋ      | 459     |
 | U+01CC | ǌ      | 460     |
 
-...i els caràcters ciríl·lics de l'alfabet serbi es defineixen així:
+...y los caracteres cirílicos del alfabeto serbio se definen así:
 
-| Codi   | Símbol | DEC     |
+| Código | Símbolo | DEC      |
 |--------|--------|----------|
 | U+0410 | А      | 1040    |
 | U+0411 | Б      | 1041    |
@@ -141,12 +141,12 @@ Unicode és un conjunt de caràcters expandit que inclou tots els codis ASCII a 
 | U+045F | џ      | 1119    |
 | U+0448 | ш      | 1096    |
 
-Nota: aquesta taula està adaptada de la versió serbia del curs i mostra l’alfabet ciríl·lic serbi amb el codi Unicode i el valor decimal de cada lletra. A la versió en català es treballa amb l’alfabet llatí, de manera que les lletres i els seus codis són diferents (per exemple, la «A» és U+0041 = 65 i la «a» és U+0061 = 97). El més important és entendre que cada caràcter es representa mitjançant un número, sigui quin sigui l’alfabet.
+Nota: esta tabla está adaptada de la versión serbia del curso y muestra el alfabeto cirílico serbio con el código Unicode y el valor decimal de cada letra. En la versión en español se trabaja con el alfabeto latino, de modo que las letras y sus códigos son diferentes (por ejemplo, la «A» es U+0041 = 65 y la «a» es U+0061 = 97). Lo más importante es entender que cada carácter se representa mediante un número, sea cual sea el alfabeto.
 
-És important notar que tot i que algunes lletres llatines i ciríl·liques es veu igual, els seus valors Unicode són diferents. Per exemple, la lletra A majúscula llatina es codifica com U+0041, mentre que la lletra A majúscula ciríl·lica es codifica com U+0410.
+Es importante notar que, aunque algunas letras latinas y cirílicas se ven iguales, sus valores Unicode son diferentes. Por ejemplo, la letra A mayúscula latina se codifica como U+0041, mientras que la letra A mayúscula cirílica se codifica como U+0410.
 
-## Cadenes
+## Cadenas
 
-Una cadena és una seqüència de caràcters ordenats en un ordre particular. Cada caràcter pot ser una lletra, un dígit, un signe de puntuació, un espai, etc. Les cadenes són fonamentals en la informàtica perquè representen text, noms de fitxers, entrada de l'usuari i molt més.
+Una cadena es una secuencia de caracteres ordenados en un orden particular. Cada carácter puede ser una letra, un dígito, un signo de puntuación, un espacio, etc. Las cadenas son fundamentales en la informática porque representan texto, nombres de archivos, entrada del usuario y mucho más.
 
-Una cadena es representa generalment com un bloc continu de memòria. Alguns sistemes terminen les cadenes amb un caràcter especial, comunament el caràcter nul '\0' (en C/C++), mentre que altres emmagatzemen la longitud de la cadena com a part del tipus de dades (en Python o C#).
+Una cadena se representa generalmente como un bloque continuo de memoria. Algunos sistemas terminan las cadenas con un carácter especial, comúnmente el carácter nulo '\0' (en C/C++), mientras que otros almacenan la longitud de la cadena como parte del tipo de datos (en Python o C#).

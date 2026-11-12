@@ -5,7 +5,10 @@ Per dominar amb èxit el material sobre xifratge, cal que coneguis els fets bàs
 
 ## Condicions
 
-A la majoria dels llenguatges de programació moderns, les instruccions condicionals es fan servir per prendre decisions i controlar el flux del programa. Les construccions més habituals són:
+
+## Conditions
+
+In most modern programming languages, conditional statements are used for decision-making and controlling program flow.
 
 * if
 * if-else
