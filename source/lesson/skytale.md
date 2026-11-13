@@ -1,10 +1,10 @@
-# Skytale
+# Escítala
 
-The Skytale (skytale) is one of the oldest known tools for encryption, dating back to ancient Greece around 400 BC. It was a simple cylindrical device used by the Spartans to send secret messages during military campaigns.
+La escítala (skytale) es una de las herramientas de cifrado más antiguas conocidas, utilizada en la antigua Grecia alrededor del año 400 a. C. Era un dispositivo cilíndrico sencillo que los espartanos empleaban para enviar mensajes secretos durante las campañas militares.
 
 A strip of parchment or leather was wrapped around a wooden rod (*skytale*) of a certain diameter. The message was then written lengthwise across the wrapped strip. To decrypt, the receiver wrapped the strip around a rod of the same diameter and read the message lengthwise, the same way it was written.
 
-If you want to encrypt the message:
+Si quieres cifrar el mensaje:
 
 ```text
 attackatdawn
@@ -26,23 +26,23 @@ acdtkatawatn
 
 To decrypt the message, the receiver wraps the strip around a rod of the same diameter and reads row by row again to reconstruct the original message.
 
-## First assignment
+## Primera tarea
 
-Create a console application in any programming language to encrypt and decrypt messages using the Skytale cipher.
+Crea una aplicación de consola en cualquier lenguaje de programación para cifrar y descifrar mensajes mediante el cifrado de escítala.
 
-The allowed alphabet for messages contains only lowercase letters of the English alphabet:
+El alfabeto permitido para los mensajes contiene solo letras minúsculas del alfabeto inglés:
 
 ```text
 Σ = { a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z }
 ```
 
-Spaces, uppercase letters, numbers, and other characters are not allowed!
+¡No se permiten espacios, letras mayúsculas, números ni otros caracteres!
 
-In the first line of input there is a message `m` of at most one hundred characters. In the second line there is an integer `k` (the number of columns in the table for encryption). In the third line there is an integer `s` (1 for encryption, 2 for decryption).
+En la primera línea de entrada hay un mensaje `m` de como máximo cien caracteres. En la segunda línea hay un entero `k` (el número de columnas de la tabla para el cifrado). En la tercera línea hay un entero `s` (1 para cifrar, 2 para descifrar).
 
-### Test Example 1
+### Ejemplo de prueba 1
 
-If the input is:
+Si la entrada es:
 
 ```text
 attackatdawn
@@ -50,15 +50,15 @@ attackatdawn
 1
 ```
 
-the output should be:
+la salida debe ser:
 
 ```text
 acdtkatawatn
 ```
 
-### Test Example 2
+### Ejemplo de prueba 2
 
-If the input is:
+Si la entrada es:
 
 ```text
 acdtkatawatn
@@ -66,36 +66,36 @@ acdtkatawatn
 2
 ```
 
-the output should be:
+la salida debe ser:
 
 ```text
 attackatdawn
 ```
 
-## Solution hints
+## Sugerencias de solución
 
 For **encryption**, write the plaintext row by row in a table with `k` columns. Read the table column by column to get the ciphertext.
 
 For **decryption**, write the ciphertext column by column into a table with `k` columns (each column holds the message length divided by `k` letters), then read the table row by row to reconstruct the plaintext.
 
-## More complex Skytale Assignments (optional)
+## Ejercicios más complejos con la escítala (opcionales)
 
-### Expand the allowed alphabet
+### Ampliar el alfabeto permitido
 
-Include uppercase letters, spaces, numbers, and punctuation marks.
+Incluye letras mayúsculas, espacios, números y signos de puntuación.
 
-### Use functions
+### Usar funciones
 
-Create `encrypt()` and `decrypt()` functions to make the code modular.
+Crea las funciones `encrypt()` y `decrypt()` para modularizar el código.
 
-### Create a class
+### Crear una clase
 
-Implement a `SkytaleCipher` class that stores `k` and provides methods for encryption and decryption.
+Implementa una clase `SkytaleCipher` que almacene `k` y proporcione métodos para cifrar y descifrar.
 
-### Encrypt and decrypt files
+### Cifrar y descifrar archivos
 
-Modify the program so that it reads plaintext or ciphertext from a file and writes the result to another file.
+Modifica el programa para que lea el texto sin cifrar o cifrado de un archivo y escriba el resultado en otro archivo.
 
-### Handle incomplete rows
+### Gestionar filas incompletas
 
-Modify the program so that if the last row is shorter than `k`, it still encrypts and decrypts correctly, handling incomplete rows appropriately.
+Modifica el programa para que, si la última fila tiene menos de `k` caracteres, siga cifrando y descifrando correctamente y gestione las filas incompletas de forma adecuada.
